@@ -11,6 +11,9 @@ class CallService {
         return axios.get(PREFIX_API+'/v2/historical/'+country);
     }
 
+    getCountriesCovid(){
+        return axios.get(PREFIX_API+'/countries');
+    }
 }
 
 export default new CallService();

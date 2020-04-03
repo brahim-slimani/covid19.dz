@@ -3,7 +3,7 @@ import {Panel} from "primereact/panel";
 import CovidService from "../service/CovidService";
 import {Chart} from "primereact/chart";
 
-class CustomChart extends React.Component{
+class CustomBarChart extends React.Component{
 
     constructor(props) {
         super(props);
@@ -16,7 +16,6 @@ class CustomChart extends React.Component{
                     data: []
                 }],
             },
-            objectLabels: null
         }
 
     }
@@ -72,7 +71,7 @@ class CustomChart extends React.Component{
                             labels: this.getXAxes(response.data.timeline.deaths),
                             datasets: [{
                                 label: 'Deaths per day',
-                                backgroundColor: '#ed1d24',
+                                backgroundColor: '#000000',
                                 data:  this.getYAxes(response.data.timeline.deaths)
                             }],
                         }
@@ -85,7 +84,7 @@ class CustomChart extends React.Component{
                             labels: this.getXAxes(response.data.timeline.recovered),
                             datasets: [{
                                 label: 'Recovered per day',
-                                backgroundColor: '#ed1d24',
+                                backgroundColor: '#1ea04c',
                                 data:  this.getYAxes(response.data.timeline.recovered)
                             }],
                         }
@@ -99,11 +98,10 @@ class CustomChart extends React.Component{
 
     render() {
         return(
-            <Panel header={this.props.title}>
-                {console.log(this.state.objectLabels)}
+            <Panel header={this.props.title} className="chart-content">
                 <Chart type='bar' data={this.state.dataChart} />
             </Panel>
         );
     }
 }
-export default CustomChart;
+export default CustomBarChart;

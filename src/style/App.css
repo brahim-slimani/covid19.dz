@@ -1,7 +1,25 @@
 /*styling app*/
 .App-logo {
-  height: 15vmin;
+  height: 10vmin;
   pointer-events: none;
+}
+
+.App-flag {
+  height: 10vmin;
+  pointer-events: none;
+}
+
+.App-title {
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 35px;
+}
+
+.App-header {
+  margin: 10px 10px 0 10px ;
+  justify-content: center;
+  align-content: center;
+  display: inline-flex;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -74,7 +92,7 @@
   justify-content: space-between;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .card-container {
     display: block;
     width: 90%;
@@ -84,6 +102,12 @@
     display: inline-block !important;
     width: 90%;
   }
+  .App-title {
+    font-size: 16px;
+  }
+  .card-country{
+    width: 100%;
+  }
 }
 
 
@@ -91,4 +115,19 @@
 .chart-container {
   display: inline-flex;
   width: 90%;
+  margin-bottom: 10px;
+}
+
+.chart-content{
+  width: 100%;
+}
+
+.countries-grid-content {
+  width: 90%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.title-covid-world {
+  font-size: 30px;
 }

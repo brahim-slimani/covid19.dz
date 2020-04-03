@@ -3,10 +3,9 @@ import {CustomCard} from "../component/CustomCard";
 import CustomHeader from "../component/CustomHeader";
 import deathIcon from "../style/img/death-icon.png";
 import CovidService from "../service/CovidService";
-import {Button} from "primereact/button";
-import {PanelMenu} from "primereact/panelmenu";
-import {Panel} from "primereact/panel";
-import CustomChart from "../component/CustomChart";
+import CustomBarChart from "../component/CustomBarChart";
+import CustomDoughnutChart from "../component/CustomDoughnutChart";
+import CustomGridCountries from "../component/CustomGridCountries";
 
 class Dashboard extends React.Component{
 
@@ -51,12 +50,23 @@ class Dashboard extends React.Component{
                 <br/>
 
                 <div className="chart-container">
-                    <CustomChart title='Evolution Cases' type='cases'/>
+                    <CustomBarChart title='Evolution Cases' type='cases'/>
                     &nbsp;
-                    <CustomChart title='Evolution Deaths' type='death'/>
+                    <CustomBarChart title='Evolution Deaths' type='death'/>
                     &nbsp;
-                    <CustomChart title='Evolution Recovered' type='recovered'/>
+                    <CustomBarChart title='Evolution Recovered' type='recovered'/>
                 </div>
+
+                <div className="chart-container">
+                    <CustomDoughnutChart title='Today Situation' type='today'/>
+                    &nbsp;
+                    <CustomDoughnutChart title='Global Situation' type='global'/>
+                    &nbsp;
+                    <div className="chart-content"/>
+                </div>
+
+                <CustomGridCountries title="COVID19 around the world" viewport={window.innerWidth > 500 ? "desktop" : "mobile"}/>
+
             </div>
         );
     }
