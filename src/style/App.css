@@ -1,0 +1,94 @@
+/*styling app*/
+.App-logo {
+  height: 15vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*justify-content: center;*/
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/*styling dashboard card*/
+.card-dashboard{
+  background-color: #1ea04c;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+.subcard-dashboard{
+  display: inline-flex;
+  margin-left: 20px;
+}
+
+.contentCard{
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+.countCard{
+  font-size: 30px;
+  margin-bottom: -10px;
+}
+
+.icon-card{
+  font-size: 50px;
+}
+
+.card-container{
+  display: inline-flex;
+  width: 90%;
+  justify-content: space-between;
+}
+
+@media (max-width: 500px) {
+  .card-container {
+    display: block;
+    width: 90%;
+    justify-content: space-between;
+  }
+  .chart-container {
+    display: inline-block !important;
+    width: 90%;
+  }
+}
+
+
+/*styling dashboard chart*/
+.chart-container {
+  display: inline-flex;
+  width: 90%;
+}
