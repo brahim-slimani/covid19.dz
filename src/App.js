@@ -1,10 +1,15 @@
 import React from 'react';
 import './style/App.css';
 import Dashboard from "./dashboard/Dashboard";
+import {CustomFooter} from "./component/CustomFooter";
 
 function App() {
   return (
-      <Dashboard/>
+      <body>
+        <Dashboard/>
+        <CustomFooter/>
+      </body>
+
   );
 }
 
