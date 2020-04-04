@@ -1,4 +1,5 @@
 import React from "react";
+import {CustomProgress} from "./CustomProgress";
 
 const CustomCard = (props) => {
     return(
@@ -10,7 +11,7 @@ const CustomCard = (props) => {
                 </span>
 
                 <div className='contentCard'>
-                    <strong className='countCard'>{props.count}</strong>
+                    {props.count != null ? <strong className='countCard'>{props.count}</strong> : <CustomProgress type="spinner"/>}
                     <div className='title'>{props.title}</div>
                 </div>
             </div>

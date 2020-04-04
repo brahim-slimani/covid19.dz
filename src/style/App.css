@@ -22,6 +22,15 @@
   display: inline-flex;
 }
 
+.header-content {
+  display: inline-block;
+  text-align: center;
+}
+
+.low-head {
+  font-size: 12px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -130,4 +139,30 @@
 
 .title-covid-world {
   font-size: 30px;
+}
+
+/*styling filter input*/
+.filter-inputtext {
+  border-radius: 0 50px 50px 0 !important;
+}
+
+.icon-button {
+  border-radius: 50px 0 0 50px !important;
+}
+
+@keyframes ui-progress-spinner-color {
+  100%,
+  0% {
+    stroke: #d62d20;
+  }
+  40% {
+    stroke: #d62d20;
+  }
+  66% {
+    stroke: #d62d20;
+  }
+  80%,
+  90% {
+    stroke: #d62d20;
+  }
 }
