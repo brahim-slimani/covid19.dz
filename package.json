@@ -2,14 +2,13 @@
   "name": "dashboard-covid19.dz",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://slimani-ibrahim.github.io/covid19.dz/",
+  "homepage": "https://slimani-ibrahim.github.io/covid19.dz",
   "dependencies": {
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
     "chart.js": "^2.9.3",
     "classnames": "^2.2.6",
     "font-awesome": "^4.7.0",
-    "gh-pages": "^2.2.0",
     "primeflex": "^1.0.0",
     "primeicons": "^2.0.0",
     "primereact": "^3.4.0",
@@ -41,5 +40,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
   }
 }
