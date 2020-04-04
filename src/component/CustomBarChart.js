@@ -57,7 +57,7 @@ class CustomBarChart extends React.Component{
                             ...prevState.dataChart,
                             labels: this.getXAxes(response.data.timeline.cases),
                             datasets: [{
-                                label: 'cases per day',
+                                label: 'Cumulation cases',
                                 backgroundColor: '#ed1d24',
                                 data:  this.getYAxes(response.data.timeline.cases)
                             }],
@@ -70,7 +70,7 @@ class CustomBarChart extends React.Component{
                             ...prevState.dataChart,
                             labels: this.getXAxes(response.data.timeline.deaths),
                             datasets: [{
-                                label: 'Deaths per day',
+                                label: 'Cumulation Deaths',
                                 backgroundColor: '#000000',
                                 data:  this.getYAxes(response.data.timeline.deaths)
                             }],
@@ -83,7 +83,7 @@ class CustomBarChart extends React.Component{
                             ...prevState.dataChart,
                             labels: this.getXAxes(response.data.timeline.recovered),
                             datasets: [{
-                                label: 'Recovered per day',
+                                label: 'Cumulation Recovered',
                                 backgroundColor: '#1ea04c',
                                 data:  this.getYAxes(response.data.timeline.recovered)
                             }],
