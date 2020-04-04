@@ -37,6 +37,15 @@
   }
 }
 
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .App {
   background-color: #282c34;
   min-height: 100vh;
@@ -47,26 +56,6 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 
 /*styling dashboard card*/
 .card-dashboard{
@@ -84,6 +73,9 @@
 .contentCard{
   margin-top: 10px;
   margin-left: 30px;
+}
+.contentCard > .title{
+  font-size: 19px;
 }
 
 .countCard{
@@ -148,21 +140,4 @@
 
 .icon-button {
   border-radius: 50px 0 0 50px !important;
-}
-
-@keyframes ui-progress-spinner-color {
-  100%,
-  0% {
-    stroke: #d62d20;
-  }
-  40% {
-    stroke: #d62d20;
-  }
-  66% {
-    stroke: #d62d20;
-  }
-  80%,
-  90% {
-    stroke: #d62d20;
-  }
 }

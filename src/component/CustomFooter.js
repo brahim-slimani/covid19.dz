@@ -49,8 +49,8 @@ function CustomFooter(props) {
 
             </div>
 
-            <div className="footer-copyright text-center py-3">© 2020 Copyright: Slimani Ibrahim
-            </div>
+            <div className="footer-copyright text-center py-3">© 2020 Copyright. Realised by Slimani Ibrahim
+        </div>
 
         </footer>
     );
