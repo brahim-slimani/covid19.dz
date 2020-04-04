@@ -2,25 +2,29 @@
   "name": "dashboard-covid19.dz",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://slimani-ibrahim.github.io/covid19.dz/",
   "dependencies": {
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
-    "react-font-awesome": "^1.0.3",
     "chart.js": "^2.9.3",
     "classnames": "^2.2.6",
     "font-awesome": "^4.7.0",
+    "gh-pages": "^2.2.0",
     "primeflex": "^1.0.0",
     "primeicons": "^2.0.0",
     "primereact": "^3.4.0",
-    "react-transition-group": "^4.3.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "react-scripts": "3.4.1"
+    "react-font-awesome": "^1.0.3",
+    "react-scripts": "3.4.1",
+    "react-transition-group": "^4.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
