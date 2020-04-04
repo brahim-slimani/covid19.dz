@@ -40,7 +40,7 @@ class Dashboard extends React.Component{
         if(doubleDate===null) return "";
         if(doubleDate===undefined) return "";
         const current_datetime = new Date(doubleDate);
-        return current_datetime.getFullYear() + "-" + (current_datetime.getMonth() + 1) + "-" + current_datetime.getDate() + " " + current_datetime.getHours() + ":" + current_datetime.getMinutes() + ":" + current_datetime.getSeconds()
+        return current_datetime.getDate()+"-"+(current_datetime.getMonth() + 1)+"-"+current_datetime.getFullYear()
     }
 
 
