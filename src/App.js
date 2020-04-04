@@ -1,5 +1,5 @@
 import React from 'react';
-import './style/App.css';
+import './style/style.css';
 import Dashboard from "./dashboard/Dashboard";
 import {CustomFooter} from "./component/CustomFooter";
 
