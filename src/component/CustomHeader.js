@@ -7,7 +7,10 @@ function CustomHeader(props){
     return(
         <div className="App-header">
             <img src={flag} className="App-flag" alt="logo" />
-            <strong className="App-title">COVID-19 Dashboard Situation in Algeria  </strong>
+            <div className="header-content">
+                <strong className="App-title">Dashboard on situation of COVID-19 in Algeria</strong>
+                <div className="low-head">{props.lastUpdate}</div>
+            </div>
             <img src={logo} className="App-logo" alt="logo" />
         </div>
     );

@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import {Panel} from "primereact/panel";
 import CovidService from "../service/CovidService";
 import {Chart} from "primereact/chart";
+import {CustomProgress} from "./CustomProgress";
 
 class CustomBarChart extends React.Component{
 
@@ -9,7 +10,7 @@ class CustomBarChart extends React.Component{
         super(props);
         this.state = {
             dataChart: {
-                labels: [],
+                labels: null,
                 datasets: [{
                     label: '',
                     backgroundColor: '#ed1d24',
@@ -99,7 +100,8 @@ class CustomBarChart extends React.Component{
     render() {
         return(
             <Panel header={this.props.title} className="chart-content">
-                <Chart type='bar' data={this.state.dataChart} />
+                {this.state.dataChart.labels != null ? <Chart type='bar' data={this.state.dataChart} />
+                : <CustomProgress type="spinner"/>}
             </Panel>
         );
     }

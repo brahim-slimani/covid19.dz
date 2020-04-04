@@ -16,6 +16,7 @@ class Dashboard extends React.Component{
             countDeaths: null,
             countRecovered: null,
             countActive: null,
+            lastUpdate: null
         }
     }
 
@@ -25,7 +26,8 @@ class Dashboard extends React.Component{
                 countCases:response.data.cases,
                 countDeaths:response.data.deaths,
                 countRecovered:response.data.recovered,
-                countActive:response.data.active
+                countActive:response.data.active,
+                lastUpdate: 'last update : ' + this.timespanToDatetime(response.data.updated)
             });
         }).catch(error => {
             console.log(error);
@@ -33,10 +35,19 @@ class Dashboard extends React.Component{
         })
     }
 
+    timespanToDatetime = (doubleDate) => {
+        if(doubleDate==="") return "";
+        if(doubleDate===null) return "";
+        if(doubleDate===undefined) return "";
+        const current_datetime = new Date(doubleDate);
+        return current_datetime.getFullYear() + "-" + (current_datetime.getMonth() + 1) + "-" + current_datetime.getDate() + " " + current_datetime.getHours() + ":" + current_datetime.getMinutes() + ":" + current_datetime.getSeconds()
+    }
+
+
     render() {
         return(
             <div className="App">
-                <CustomHeader/>
+                <CustomHeader lastUpdate={this.state.lastUpdate}/>
                 <br/>
                 <div className='card-container'>
                     <CustomCard icon='fa fa-certificate' title='Confirmed Cases' count={this.state.countCases}/>
@@ -65,7 +76,7 @@ class Dashboard extends React.Component{
                     <div className="chart-content"/>
                 </div>
 
-                <CustomGridCountries title="COVID19 around the world" viewport={window.innerWidth > 500 ? "desktop" : "mobile"}/>
+                <CustomGridCountries title="COVID-19 around the world" viewport={window.innerWidth > 500 ? "desktop" : "mobile"}/>
 
             </div>
         );
