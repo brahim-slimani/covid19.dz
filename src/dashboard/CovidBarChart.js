@@ -2,9 +2,9 @@ import React, {Component} from "react";
 import {Panel} from "primereact/panel";
 import CovidService from "../service/CovidService";
 import {Chart} from "primereact/chart";
-import {CustomProgress} from "./CustomProgress";
+import {CustomProgress} from "../component/CustomProgress";
 
-class CustomBarChart extends React.Component{
+class CovidBarChart extends React.Component{
 
     constructor(props) {
         super(props);
@@ -106,4 +106,4 @@ class CustomBarChart extends React.Component{
         );
     }
 }
-export default CustomBarChart;
+export default CovidBarChart;

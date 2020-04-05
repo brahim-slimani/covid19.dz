@@ -8,7 +8,7 @@ import {InputText} from "primereact/inputtext";
 import {Button} from "primereact/button";
 import {ProgressBar} from "primereact/progressbar";
 
-class CustomGridCountries extends React.Component {
+class GridCountries extends React.Component {
 
     constructor(props) {
         super(props);
@@ -67,7 +67,7 @@ class CustomGridCountries extends React.Component {
                     <div className="p-col-12 p-md-4">
                         <div className="p-inputgroup">
                             <Button icon="pi pi-search" className="p-button-success icon-button" />
-                            <InputText placeholder="Filter" onChange={this.handleSearch} className="filter-inputtext"/>
+                            <InputText placeholder="Search country" onChange={this.handleSearch} className="filter-inputtext"/>
                         </div>
                     </div>
                 </div>
@@ -87,4 +87,4 @@ class CustomGridCountries extends React.Component {
     }
 }
 
-export default CustomGridCountries;
+export default GridCountries;

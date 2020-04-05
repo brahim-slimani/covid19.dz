@@ -3,9 +3,11 @@ import {CustomCard} from "../component/CustomCard";
 import CustomHeader from "../component/CustomHeader";
 import deathIcon from "../style/img/death-icon.png";
 import CovidService from "../service/CovidService";
-import CustomBarChart from "../component/CustomBarChart";
-import CustomDoughnutChart from "../component/CustomDoughnutChart";
-import CustomGridCountries from "../component/CustomGridCountries";
+import CovidBarChart from "./CovidBarChart";
+import CovidDoughnutChart from "./CovidDoughnutChart";
+import GridCountries from "./GridCountries";
+import GridWilayas from "./GridWilayas";
+import WilayaChart from "./WilayaChart";
 
 class Dashboard extends React.Component{
 
@@ -61,22 +63,24 @@ class Dashboard extends React.Component{
                 <br/>
 
                 <div className="chart-container">
-                    <CustomBarChart title='Evolution Cases' type='cases'/>
+                    <CovidBarChart title='Evolution Cases' type='cases'/>
                     &nbsp;
-                    <CustomBarChart title='Evolution Deaths' type='death'/>
+                    <CovidBarChart title='Evolution Deaths' type='death'/>
                     &nbsp;
-                    <CustomBarChart title='Evolution Recovered' type='recovered'/>
+                    <CovidBarChart title='Evolution Recovered' type='recovered'/>
                 </div>
 
                 <div className="chart-container">
-                    <CustomDoughnutChart title='Today Situation' type='today'/>
+                    <CovidDoughnutChart title='Today Situation' type='today'/>
                     &nbsp;
-                    <CustomDoughnutChart title='Global Situation' type='global'/>
+                    <CovidDoughnutChart title='Global Situation' type='global'/>
                     &nbsp;
-                    <div className="chart-content"/>
+                    <div className="chart-content" />
                 </div>
 
-                <CustomGridCountries title="COVID-19 around the world" viewport={window.innerWidth > 500 ? "desktop" : "mobile"}/>
+                <GridWilayas title="Situation in Wilayas" viewport={window.innerWidth > 500 ? "desktop" : "mobile"} />
+
+                <GridCountries title="COVID-19 around the world" viewport={window.innerWidth > 500 ? "desktop" : "mobile"}/>
 
             </div>
         );
