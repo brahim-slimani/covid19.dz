@@ -16,7 +16,7 @@ function CustomFooter(props) {
 
 
                         <h5><a href="#">COVID19.DZ</a></h5>
-                        <p>Dashboard for the Corona Virus Disease situation in Algeria & around the world.</p>
+                        <p>Situation Dashboard for the Corona Virus Disease in Algeria & around the world.</p>
 
                     </div>
 
