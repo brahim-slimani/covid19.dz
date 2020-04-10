@@ -50,24 +50,45 @@ class CovidDoughnutChart extends React.Component{
 
 
     componentDidMount() {
-        CovidService.getCountryCovid('Algeria').then(response => {
-            this.setState(prevState => ({
-                dataChart: {
-                    ...prevState.dataChart,
-                    labels: this.getXAxes(),
-                    datasets: [{
-                        data:  this.getYAxes(response.data),
-                        backgroundColor: [
-                            "#ed1d24",
-                            "#000000",
-                            "#1ea04c"
-                        ],
-                    }],
-                }
-            }));
-        }).catch(error =>{
-            console.log(error);
-        });
+        if(this.props.perimeter == 'world'){
+            CovidService.getWorldCovid().then(response => {
+                this.setState(prevState => ({
+                    dataChart: {
+                        ...prevState.dataChart,
+                        labels: this.getXAxes(),
+                        datasets: [{
+                            data:  this.getYAxes(response.data),
+                            backgroundColor: [
+                                "#ed1d24",
+                                "#000000",
+                                "#1ea04c"
+                            ],
+                        }],
+                    }
+                }));
+            }).catch(error =>{
+                console.log(error);
+            });
+        }else {
+            CovidService.getCountryCovid('Algeria').then(response => {
+                this.setState(prevState => ({
+                    dataChart: {
+                        ...prevState.dataChart,
+                        labels: this.getXAxes(),
+                        datasets: [{
+                            data:  this.getYAxes(response.data),
+                            backgroundColor: [
+                                "#ed1d24",
+                                "#000000",
+                                "#1ea04c"
+                            ],
+                        }],
+                    }
+                }));
+            }).catch(error =>{
+                console.log(error);
+            });
+        }
     }
 
     render() {

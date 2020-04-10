@@ -7,6 +7,7 @@ function App() {
   return (
       <body>
         <Dashboard/>
+        <br/>
         <CustomFooter/>
       </body>
 

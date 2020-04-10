@@ -43,7 +43,7 @@ class GridWilayas extends React.Component {
         return (
             <div className="p-col-3 card-country">
                 {item != null &&
-                <Panel header={item.fr+' '+item.ar} style={{textAlign: 'center'}}>
+                <Panel header={item.fr+' '+item.ar+' '+item.code} style={{textAlign: 'center'}}>
                     <div><i className="fa fa-certificate"/>&nbsp;Confirmed Cases : {item.confirmed}</div>
                     {/*<div><i className="fa fa-mars"/>&nbsp;Male : {item.males} &nbsp;<i className="fa fa-venus"/> &nbsp;Female : {item.females} </div>*/}
                     <div><i className="fa fa-heartbeat"/>&nbsp;Recovered : {item.recovers}</div>
@@ -67,7 +67,8 @@ class GridWilayas extends React.Component {
         let wilayas = this.state.wilayaFilter;
         let searchedWilayas = wilayas.filter(wilaya =>
             wilaya.fr.toLowerCase().includes(event.target.value.toLowerCase())
-            || wilaya.ar.toLowerCase().includes(event.target.value.toLowerCase()));
+            || wilaya.ar.toLowerCase().includes(event.target.value.toLowerCase())
+            || wilaya.code.toString().toLowerCase().includes(event.target.value.toLowerCase()));
         this.setState({wilayasCovid: searchedWilayas});
     }
 

@@ -57,6 +57,10 @@
   color: white;
 }
 
+body {
+  background-color: #282c34 !important;
+}
+
 /*styling dashboard card*/
 .card-dashboard{
   background-color: #1ea04c;

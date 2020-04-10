@@ -2,12 +2,12 @@ import React from "react";
 import {CustomCard} from "../component/CustomCard";
 import CustomHeader from "../component/CustomHeader";
 import deathIcon from "../style/img/death-icon.png";
+import bioIcon from "../style/img/bio-danger-icon.png";
 import CovidService from "../service/CovidService";
 import CovidBarChart from "./CovidBarChart";
 import CovidDoughnutChart from "./CovidDoughnutChart";
 import GridCountries from "./GridCountries";
 import GridWilayas from "./GridWilayas";
-import WilayaChart from "./WilayaChart";
 
 class Dashboard extends React.Component{
 
@@ -58,30 +58,52 @@ class Dashboard extends React.Component{
                     &nbsp;
                     <CustomCard icon='fa fa-heartbeat' title='Recovered' count={this.state.countRecovered}/>
                     &nbsp;
-                    <CustomCard icon='fa fa-hotel' title='Hospitalized' count={this.state.countActive}/>
+                    <CustomCard img={bioIcon} title='Active Cases' count={this.state.countActive}/>
                 </div>
                 <br/>
 
                 <div className="chart-container">
-                    <CovidBarChart title='Evolution Cases' type='cases'/>
+                    <CovidBarChart title='Evolution Cases' type='cases' perimeter='Algeria'/>
                     &nbsp;
-                    <CovidBarChart title='Evolution Deaths' type='death'/>
+                    <CovidBarChart title='Evolution Deaths' type='death' perimeter='Algeria'/>
                     &nbsp;
-                    <CovidBarChart title='Evolution Recovered' type='recovered'/>
+                    <CovidBarChart title='Evolution Recovered' type='recovered' perimeter='Algeria'/>
                 </div>
 
                 <div className="chart-container">
-                    <CovidDoughnutChart title='Today Situation' type='today'/>
+                    <CovidDoughnutChart title='Today Situation' type='today' perimeter='Algeria'/>
                     &nbsp;
-                    <CovidDoughnutChart title='Global Situation' type='global'/>
+                    <CovidDoughnutChart title='Global Situation' type='global' perimeter='Algeria'/>
                     &nbsp;
                     <div className="chart-content" />
                 </div>
+                {/*<div className="chart-container">
+                    <WilayaChart title='Cases % Wilaya' type='confirmed'/>
+                    &nbsp;
+                    <WilayaChart title='Deaths % Wilaya' type='deaths'/>
+                    &nbsp;
+                    <div className="chart-content" />
+                </div>*/}
 
-                <GridWilayas title="Situation in Wilayas" viewport={window.innerWidth > 500 ? "desktop" : "mobile"} />
+                <GridWilayas title="Situation in Provinces" viewport={window.innerWidth > 500 ? "desktop" : "mobile"} />
 
                 <GridCountries title="COVID-19 around the world" viewport={window.innerWidth > 500 ? "desktop" : "mobile"}/>
 
+                <div className="chart-container">
+                    <CovidBarChart title='Evolution Cases' type='cases' perimeter='world'/>
+                    &nbsp;
+                    <CovidBarChart title='Evolution Deaths' type='death' perimeter='world'/>
+                    &nbsp;
+                    <CovidBarChart title='Evolution Recovered' type='recovered' perimeter='world'/>
+                </div>
+
+                <div className="chart-container">
+                    <CovidDoughnutChart title='Today Situation' type='today' perimeter='world'/>
+                    &nbsp;
+                    <CovidDoughnutChart title='Global Situation' type='global' perimeter='world'/>
+                    &nbsp;
+                    <div className="chart-content" />
+                </div>
             </div>
         );
     }

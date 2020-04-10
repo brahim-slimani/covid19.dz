@@ -8,6 +8,11 @@ class CallService {
         return axios.get(PREFIX_API_NOVEL+'/countries/'+country);
     }
 
+    getWorldCovid(){
+        return axios.get(PREFIX_API_NOVEL+'/all');
+    }
+
+
     getHistoricalCovid(country){
         return axios.get(PREFIX_API_NOVEL+'/v2/historical/'+country);
     }

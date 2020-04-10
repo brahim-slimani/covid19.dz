@@ -24,7 +24,8 @@ class WilayaChart extends React.Component{
 
     getXAxes = (data) => {
         let axes = data.map(w => w.fr);
-        return axes;
+        let result = axes.splice(0, 6);
+        return result;
     }
 
     getYAxes = (data) => {
@@ -37,7 +38,8 @@ class WilayaChart extends React.Component{
                 axes = data.map(w => w.deaths);
                 break;
         }
-        return axes;
+        let result = axes.splice(0, 6);
+        return result;
     }
 
 
