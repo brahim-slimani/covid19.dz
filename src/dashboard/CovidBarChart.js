@@ -45,22 +45,34 @@ class CovidBarChart extends React.Component{
         result = result.filter(function (x) {
             return x !== undefined;
         });
+
+        //temporary static solution for ecart recovered timelines
+        if(this.props.type == 'recovered' && this.props.perimeter == 'Algeria'){
+            result[7] = 16;
+            result[8] = 16;
+            result[9] = 16;
+            result[10] = 20;
+            result[11] = 20;
+            result[13] = 24;
+        }
         return result;
     }
 
 
     componentDidMount() {
-        CovidService.getHistoricalCovid('Algeria').then(response => {
+        var prefixUrl = this.props.perimeter == 'world' ? 'all' : 'Algeria';
+        CovidService.getHistoricalCovid(prefixUrl).then(response => {
+            let customResponse = this.props.perimeter == 'world' ? response.data : response.data.timeline;
             switch (this.props.type) {
                 case 'cases' :
                     this.setState(prevState => ({
                         dataChart: {
                             ...prevState.dataChart,
-                            labels: this.getXAxes(response.data.timeline.cases),
+                            labels: this.getXAxes(customResponse.cases),
                             datasets: [{
                                 label: 'Cumulation cases',
                                 backgroundColor: '#ed1d24',
-                                data:  this.getYAxes(response.data.timeline.cases)
+                                data:  this.getYAxes(customResponse.cases)
                             }],
                         }
                     }));
@@ -69,11 +81,11 @@ class CovidBarChart extends React.Component{
                     this.setState(prevState => ({
                         dataChart: {
                             ...prevState.dataChart,
-                            labels: this.getXAxes(response.data.timeline.deaths),
+                            labels: this.getXAxes(customResponse.deaths),
                             datasets: [{
                                 label: 'Cumulation Deaths',
                                 backgroundColor: '#000000',
-                                data:  this.getYAxes(response.data.timeline.deaths)
+                                data:  this.getYAxes(customResponse.deaths)
                             }],
                         }
                     }));
@@ -82,11 +94,12 @@ class CovidBarChart extends React.Component{
                     this.setState(prevState => ({
                         dataChart: {
                             ...prevState.dataChart,
-                            labels: this.getXAxes(response.data.timeline.recovered),
+                            labels: this.getXAxes(customResponse.recovered),
                             datasets: [{
                                 label: 'Cumulation Recovered',
                                 backgroundColor: '#1ea04c',
-                                data:  this.getYAxes(response.data.timeline.recovered)
+                                fill: false,
+                                data:  this.getYAxes(customResponse.recovered)
                             }],
                         }
                     }));
