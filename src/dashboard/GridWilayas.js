@@ -6,6 +6,8 @@ import {DataView} from "primereact/dataview";
 import {InputText} from "primereact/inputtext";
 import {Button} from "primereact/button";
 import {ProgressBar} from "primereact/progressbar";
+import {CustomInputFilter} from "../component/CustomInputFilter";
+import {CustomProgress} from "../component/CustomProgress";
 
 class GridWilayas extends React.Component {
 
@@ -80,14 +82,7 @@ class GridWilayas extends React.Component {
                 <div><strong className="title-covid-world">{this.props.title}</strong></div>
                 <p/>
 
-                <div className="p-grid p-fluid" style={{justifyContent:'center'}}>
-                    <div className="p-col-12 p-md-4">
-                        <div className="p-inputgroup">
-                            <Button icon="pi pi-search" className="p-button-success icon-button" />
-                            <InputText placeholder="Search wilaya" onChange={this.handleSearch} className="filter-inputtext"/>
-                        </div>
-                    </div>
-                </div>
+                <CustomInputFilter hint='Search wilaya' onChange={this.handleSearch}/>
 
                 {this.state.wilayasCovid != null ?
                     <DataView value={this.state.wilayasCovid}
@@ -96,7 +91,7 @@ class GridWilayas extends React.Component {
                               layout={this.props.viewport == 'desktop' ? 'grid' : 'list'}
                               rows={12}>
                     </DataView>
-                : <ProgressBar mode="indeterminate" style={{height: '6px'}}/>}
+                : <CustomProgress type='bar'/>}
 
                 <br/>
             </div>

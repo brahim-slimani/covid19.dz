@@ -8,6 +8,7 @@ import CovidBarChart from "./CovidBarChart";
 import CovidDoughnutChart from "./CovidDoughnutChart";
 import GridCountries from "./GridCountries";
 import GridWilayas from "./GridWilayas";
+import CovidRankDeath from "./CovidRankDeath";
 
 class Dashboard extends React.Component{
 
@@ -104,6 +105,9 @@ class Dashboard extends React.Component{
                     &nbsp;
                     <div className="chart-content" />
                 </div>
+
+                <CovidRankDeath />
+
             </div>
         );
     }

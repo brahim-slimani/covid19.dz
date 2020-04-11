@@ -113,6 +113,15 @@ body {
   .card-country{
     width: 100%;
   }
+
+  .header-table {
+    display:inline-block !important;
+  }
+
+  .header-title-table {
+    font-size: 14px !important;
+    margin-bottom: 20px !important;
+  }
 }
 
 
@@ -141,6 +150,7 @@ body {
 /*styling filter input*/
 .filter-inputtext {
   border-radius: 0 50px 50px 0 !important;
+  width: 100% !important;
 }
 
 .icon-button {
@@ -149,4 +159,27 @@ body {
 
 .gender-report-content {
   margin: 8px;
+}
+
+/* styling rank table */
+.rank-container {
+  width: 90%;
+  margin: 20px 0 20px 0;
+}
+
+.header-table {
+  text-align:left;
+  display:inline-flex;
+  justify-content:space-between;
+  width:100%
+}
+
+.header-title-table {
+  font-size: 20px;
+  margin-right: 40px;
+}
+
+.p-datatable-row:hover {
+  background-color: #1ea04c !important;
+  cursor: pointer;
 }
