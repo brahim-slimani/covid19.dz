@@ -7,6 +7,8 @@ import {DataView} from "primereact/dataview";
 import {InputText} from "primereact/inputtext";
 import {Button} from "primereact/button";
 import {ProgressBar} from "primereact/progressbar";
+import {CustomInputFilter} from "../component/CustomInputFilter";
+import {CustomProgress} from "../component/CustomProgress";
 
 class GridCountries extends React.Component {
 
@@ -20,10 +22,17 @@ class GridCountries extends React.Component {
 
     }
 
+    sortDataSet = (data) => {
+        let result = data;
+        result.sort(function (a,b) {
+            return (b.cases - a.cases);
+        })
+    }
 
     componentDidMount() {
         CovidService.getCountriesCovid().then(response => {
-            this.setState({countriesCovid: response.data, countriesFilter: response.data})
+            this.setState({countriesCovid: response.data, countriesFilter: response.data});
+            this.sortDataSet(this.state.countriesCovid);
         }).catch(error => {
             console.log(error);
         });
@@ -63,14 +72,7 @@ class GridCountries extends React.Component {
                 <div><strong className="title-covid-world">{this.props.title}</strong></div>
                 <p/>
 
-                <div className="p-grid p-fluid" style={{justifyContent:'center'}}>
-                    <div className="p-col-12 p-md-4">
-                        <div className="p-inputgroup">
-                            <Button icon="pi pi-search" className="p-button-success icon-button" />
-                            <InputText placeholder="Search country" onChange={this.handleSearch} className="filter-inputtext"/>
-                        </div>
-                    </div>
-                </div>
+                <CustomInputFilter hint='Search country' onChange={this.handleSearch}/>
 
                 {this.state.countriesCovid != null ?
                     <DataView value={this.state.countriesCovid}
@@ -79,7 +81,7 @@ class GridCountries extends React.Component {
                               layout={this.props.viewport == 'desktop' ? 'grid' : 'list'}
                               rows={12}>
                     </DataView>
-                : <ProgressBar mode="indeterminate" style={{height: '6px'}}/>}
+                : <CustomProgress type='bar'/>}
 
                 <br/>
             </div>
