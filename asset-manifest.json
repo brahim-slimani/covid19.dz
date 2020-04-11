@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/covid19.dz/static/css/main.e644d400.chunk.css",
-    "main.js": "/covid19.dz/static/js/main.808ad3c3.chunk.js",
+    "main.css": "/covid19.dz/static/css/main.f265b2e2.chunk.css",
+    "main.js": "/covid19.dz/static/js/main.c65dd7e7.chunk.js",
     "runtime-main.js": "/covid19.dz/static/js/runtime-main.8a8e367d.js",
     "static/css/2.3b4a80e9.chunk.css": "/covid19.dz/static/css/2.3b4a80e9.chunk.css",
-    "static/js/2.38421071.chunk.js": "/covid19.dz/static/js/2.38421071.chunk.js",
+    "static/js/2.6dd8679d.chunk.js": "/covid19.dz/static/js/2.6dd8679d.chunk.js",
     "index.html": "/covid19.dz/index.html",
-    "precache-manifest.9bb42af1f9d5aa40b32ce06dcc514328.js": "/covid19.dz/precache-manifest.9bb42af1f9d5aa40b32ce06dcc514328.js",
+    "precache-manifest.ec94030630950ef86b3efdbfc4250227.js": "/covid19.dz/precache-manifest.ec94030630950ef86b3efdbfc4250227.js",
     "service-worker.js": "/covid19.dz/service-worker.js",
-    "static/js/2.38421071.chunk.js.LICENSE.txt": "/covid19.dz/static/js/2.38421071.chunk.js.LICENSE.txt",
+    "static/js/2.6dd8679d.chunk.js.LICENSE.txt": "/covid19.dz/static/js/2.6dd8679d.chunk.js.LICENSE.txt",
     "static/media/algeria-flag.png": "/covid19.dz/static/media/algeria-flag.6bb826dc.png",
     "static/media/bio-danger-icon.png": "/covid19.dz/static/media/bio-danger-icon.e4fbaebb.png",
     "static/media/primereact.min.css": "/covid19.dz/static/media/line.567f5738.gif",
@@ -21,8 +21,8 @@
   "entrypoints": [
     "static/js/runtime-main.8a8e367d.js",
     "static/css/2.3b4a80e9.chunk.css",
-    "static/js/2.38421071.chunk.js",
-    "static/css/main.e644d400.chunk.css",
-    "static/js/main.808ad3c3.chunk.js"
+    "static/js/2.6dd8679d.chunk.js",
+    "static/css/main.f265b2e2.chunk.css",
+    "static/js/main.c65dd7e7.chunk.js"
   ]
 }
