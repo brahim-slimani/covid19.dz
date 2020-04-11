@@ -91,11 +91,18 @@ class CovidDoughnutChart extends React.Component{
         }
     }
 
+
     render() {
+        const options = {
+            legend: {
+                position: 'right'
+            },
+            responsive:true,
+        };
         return(
             <Panel header={this.props.title} className="chart-content">
                 {this.state.dataChart.labels != null ?
-                    <Chart type='doughnut' data={this.state.dataChart} /> : <CustomProgress type='spinner'/>
+                    <Chart type='doughnut' data={this.state.dataChart} options={options} /> : <CustomProgress type='spinner'/>
                 }
             </Panel>
         );

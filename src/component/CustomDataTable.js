@@ -11,7 +11,7 @@ function CustomDataTable (props) {
     const [filter, setFilter] = useState(null);
 
     let dynamicColumns = props.columns.map((col) => {
-        return <Column sortable={col.field == 'country' ? false : true}  key={col.field} field={col.field} header={col.header} headerStyle={{overflowWrap:'break-word'}}/>;
+        return <Column sortable={col.field == 'flag' ? false : true} key={col.field} field={col.field} header={col.header} headerStyle={{overflowWrap:'break-word'}}/>;
     });
 
     const header =
