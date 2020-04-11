@@ -15,8 +15,9 @@ class CovidRankDeath extends Component {
 
     columnsDataTable = [
         {header: 'Rank', field: 'rank'},
+        {header: 'Country Flag', field: 'flag'},
         {header: 'Country Name', field: 'country'},
-        {header: 'Deaths Percentage %', field: 'deathPercent'}
+        {header: 'Deaths Ratio %', field: 'deathPercent'}
     ]
 
     dealRankingData = (data) => {
@@ -24,7 +25,12 @@ class CovidRankDeath extends Component {
         data.map((item) => {
             var deathReport = (item.deaths / item.cases) * 100;
             result.push(
-                {rank: 0, country:<div style={{display:'inline-flex'}}><span style={{width:70}}><img src={item.countryInfo.flag} height={30}/></span><p>{item.country}</p> </div>, deathPercent: deathReport.toFixed(2)}
+                {
+                    rank: 0,
+                    flag : <img src={item.countryInfo.flag} height={30} style={{borderRadius: 7}}/>,
+                    country: item.country,
+                    deathPercent: deathReport.toFixed(2)
+                }
             );
         });
 
@@ -55,7 +61,8 @@ class CovidRankDeath extends Component {
         return (
             <div className='rank-container'>
                 {this.state.data != null ?
-                    <CustomDataTable title='Ranking of countries by percentage of deaths' columns={this.columnsDataTable}
+                    <CustomDataTable title='Ranking of countries by rate of deaths'
+                                     columns={this.columnsDataTable}
                                      data={this.dealRankingData(this.state.data)}/>
                     : <CustomProgress type='bar'/>
                 }
