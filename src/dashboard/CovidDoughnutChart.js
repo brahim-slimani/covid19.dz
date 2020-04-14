@@ -26,10 +26,10 @@ class CovidDoughnutChart extends React.Component{
         let axes;
         switch (this.props.type) {
             case 'global':
-                axes = ['confirmed','deaths','recovered'];
+                axes = ['active cases','deaths','recovered'];
                 break;
             case 'today':
-                axes = ['confirmed','deaths'];
+                axes = ['new cases','deaths'];
                 break;
         }
         return axes;
@@ -39,7 +39,7 @@ class CovidDoughnutChart extends React.Component{
         let axes;
         switch (this.props.type) {
             case 'global':
-                axes = [data.cases, data.deaths, data.recovered];
+                axes = [data.active, data.deaths, data.recovered];
                 break;
             case 'today':
                 axes = [data.todayCases, data.todayDeaths];

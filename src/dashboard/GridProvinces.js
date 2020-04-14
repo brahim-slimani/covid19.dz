@@ -9,7 +9,7 @@ import {ProgressBar} from "primereact/progressbar";
 import {CustomInputFilter} from "../component/CustomInputFilter";
 import {CustomProgress} from "../component/CustomProgress";
 
-class GridWilayas extends React.Component {
+class GridProvinces extends React.Component {
 
     constructor(props) {
         super(props);
@@ -99,4 +99,4 @@ class GridWilayas extends React.Component {
     }
 }
 
-export default GridWilayas;
+export default GridProvinces;
