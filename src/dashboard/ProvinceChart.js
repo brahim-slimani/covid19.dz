@@ -4,7 +4,7 @@ import CovidService from "../service/CovidService";
 import {Chart} from "primereact/chart";
 import {CustomProgress} from "../component/CustomProgress";
 
-class WilayaChart extends React.Component{
+class ProvinceChart extends React.Component{
 
     constructor(props) {
         super(props);
@@ -74,4 +74,4 @@ class WilayaChart extends React.Component{
         );
     }
 }
-export default WilayaChart;
+export default ProvinceChart;

@@ -7,7 +7,7 @@ import CovidService from "../service/CovidService";
 import CovidBarChart from "./CovidBarChart";
 import CovidDoughnutChart from "./CovidDoughnutChart";
 import GridCountries from "./GridCountries";
-import GridWilayas from "./GridWilayas";
+import GridProvinces from "./GridProvinces";
 import CovidRankDeath from "./CovidRankDeath";
 
 class Dashboard extends React.Component{
@@ -86,7 +86,7 @@ class Dashboard extends React.Component{
                     <div className="chart-content" />
                 </div>*/}
 
-                <GridWilayas title="Situation in Provinces" viewport={window.innerWidth > 500 ? "desktop" : "mobile"} />
+                <GridProvinces title="Situation in Provinces" viewport={window.innerWidth > 500 ? "desktop" : "mobile"} />
 
                 <GridCountries title="COVID-19 around the world" viewport={window.innerWidth > 500 ? "desktop" : "mobile"}/>
 
