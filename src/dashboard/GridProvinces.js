@@ -3,9 +3,6 @@ import {Panel} from "primereact/panel";
 import CovidService from "../service/CovidService";
 import deathIcon from "../style/img/death-icon.png";
 import {DataView} from "primereact/dataview";
-import {InputText} from "primereact/inputtext";
-import {Button} from "primereact/button";
-import {ProgressBar} from "primereact/progressbar";
 import {CustomInputFilter} from "../component/CustomInputFilter";
 import {CustomProgress} from "../component/CustomProgress";
 
@@ -48,7 +45,7 @@ class GridProvinces extends React.Component {
                 <Panel header={item.fr+' '+item.ar+' '+item.code} style={{textAlign: 'center'}}>
                     <div><i className="fa fa-certificate"/>&nbsp;Confirmed Cases : {item.confirmed}</div>
                     {/*<div><i className="fa fa-mars"/>&nbsp;Male : {item.males} &nbsp;<i className="fa fa-venus"/> &nbsp;Female : {item.females} </div>*/}
-                    <div><i className="fa fa-heartbeat"/>&nbsp;Recovered : {item.recovers}</div>
+                    {/*<div><i className="fa fa-heartbeat"/>&nbsp;Recovered : {item.recovers}</div>*/}
                     <div><i className="fa fa-eye"/>&nbsp;New Cases :  {item.new_cases}</div>
                     <div><img src={deathIcon} height={15}/>&nbsp;Deaths : {item.deaths}</div>
                     {/*<div className="col-12 gender-report-content">*/}
