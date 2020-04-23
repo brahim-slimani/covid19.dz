@@ -63,9 +63,9 @@ body {
 
 /*styling dashboard card*/
 .card-dashboard{
-  background-color: #1ea04c;
+  background-color: #191919;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 0px;
   color: white;
 }
 

@@ -2,7 +2,7 @@ import React from "react";
 import {CustomCard} from "../component/CustomCard";
 import CustomHeader from "../component/CustomHeader";
 import deathIcon from "../style/img/death-icon.png";
-import bioIcon from "../style/img/bio-danger-icon.png";
+import bioIcon from "../style/img/bio-danger-yellow.png";
 import CovidService from "../service/CovidService";
 import CovidBarChart from "./CovidBarChart";
 import CovidDoughnutChart from "./CovidDoughnutChart";
@@ -53,13 +53,13 @@ class Dashboard extends React.Component{
                 <CustomHeader lastUpdate={this.state.lastUpdate}/>
                 <br/>
                 <div className='card-container'>
-                    <CustomCard icon='fa fa-certificate' title='Confirmed Cases' count={this.state.countCases}/>
+                    <CustomCard icon='fa fa-certificate' title='Confirmed Cases' count={this.state.countCases} color="red"/>
                     &nbsp;
-                    <CustomCard img={deathIcon} title='Deaths' count={this.state.countDeaths}/>
+                    <CustomCard img={deathIcon} title='Deaths' count={this.state.countDeaths} color="white"/>
                     &nbsp;
-                    <CustomCard icon='fa fa-heartbeat' title='Recovered' count={this.state.countRecovered}/>
+                    <CustomCard icon='fa fa-heartbeat' title='Recovered' count={this.state.countRecovered} color="#1ea04c"/>
                     &nbsp;
-                    <CustomCard img={bioIcon} title='Active Cases' count={this.state.countActive}/>
+                    <CustomCard img={bioIcon} title='Active Cases' count={this.state.countActive} color="#ffde00"/>
                 </div>
                 <br/>
 

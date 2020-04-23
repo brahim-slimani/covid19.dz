@@ -3,7 +3,7 @@ import {CustomProgress} from "./CustomProgress";
 
 const CustomCard = (props) => {
     return(
-        <div className="col-lg-3 col-md-3 col-sm-12 col-xs-12 card-dashboard">
+        <div className="col-lg-3 col-md-3 col-sm-12 col-xs-12 card-dashboard" style={{color:props.color}}>
             <div className="info-box blue-bg subcard-dashboard">
                 <span className='icon-card'>
                     <i className={props.icon}></i>
