@@ -3,9 +3,6 @@ import {Panel} from "primereact/panel";
 import CovidService from "../service/CovidService";
 import deathIcon from "../style/img/death-icon.png";
 import {DataView} from "primereact/dataview";
-import {InputText} from "primereact/inputtext";
-import {Button} from "primereact/button";
-import {ProgressBar} from "primereact/progressbar";
 import {CustomInputFilter} from "../component/CustomInputFilter";
 import {CustomProgress} from "../component/CustomProgress";
 
