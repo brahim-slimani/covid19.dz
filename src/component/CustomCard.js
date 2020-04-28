@@ -4,6 +4,7 @@ import {CustomProgress} from "./CustomProgress";
 const CustomCard = (props) => {
     return(
         <div className="col-lg-3 col-md-3 col-sm-12 col-xs-12 card-dashboard">
+            {props.todayReport != 0 && props.todayReport != null && <span className="new-situation-span">+ {props.todayReport} {props.subtitle}</span>}
             <div className="info-box blue-bg subcard-dashboard">
                 <span className='icon-card'>
                     <i className={props.icon}></i>
