@@ -19,6 +19,8 @@ class Dashboard extends React.Component{
             countDeaths: null,
             countRecovered: null,
             countActive: null,
+            todayCases: null,
+            todayDeaths: null,
             lastUpdate: null
         }
     }
@@ -30,6 +32,8 @@ class Dashboard extends React.Component{
                 countDeaths:response.data.deaths,
                 countRecovered:response.data.recovered,
                 countActive:response.data.active,
+                todayCases: response.data.todayCases,
+                todayDeaths: response.data.todayDeaths,
                 lastUpdate: 'last update : ' + this.timespanToDatetime(response.data.updated)
             });
         }).catch(error => {
@@ -53,11 +57,11 @@ class Dashboard extends React.Component{
                 <CustomHeader lastUpdate={this.state.lastUpdate}/>
                 <br/>
                 <div className='card-container'>
-                    <CustomCard icon='fa fa-certificate' title='Confirmed Cases' count={this.state.countCases}/>
+                    <CustomCard icon='fa fa-certificate' title='Total Cases' count={this.state.countCases} todayReport={this.state.todayCases} subtitle='new cases' />
                     &nbsp;
-                    <CustomCard img={deathIcon} title='Deaths' count={this.state.countDeaths}/>
+                    <CustomCard img={deathIcon} title='Total Deaths' count={this.state.countDeaths} todayReport={this.state.todayDeaths} subtitle='new deaths' />
                     &nbsp;
-                    <CustomCard icon='fa fa-heartbeat' title='Recovered' count={this.state.countRecovered}/>
+                    <CustomCard icon='fa fa-heartbeat' title='Total Recoveres' count={this.state.countRecovered}/>
                     &nbsp;
                     <CustomCard img={bioIcon} title='Active Cases' count={this.state.countActive}/>
                 </div>
