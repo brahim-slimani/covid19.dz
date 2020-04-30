@@ -61,7 +61,7 @@ class CovidBarChart extends React.Component{
                             ...prevState.dataChart,
                             labels: this.getXAxes(customResponse.cases),
                             datasets: [{
-                                label: 'Cumulation cases',
+                                label: 'Cumulative cases',
                                 backgroundColor: '#ed1d24',
                                 data:  this.getYAxes(customResponse.cases)
                             }],
@@ -74,7 +74,7 @@ class CovidBarChart extends React.Component{
                             ...prevState.dataChart,
                             labels: this.getXAxes(customResponse.deaths),
                             datasets: [{
-                                label: 'Cumulation Deaths',
+                                label: 'Cumulative Deaths',
                                 backgroundColor: '#000000',
                                 data:  this.getYAxes(customResponse.deaths)
                             }],
@@ -87,7 +87,7 @@ class CovidBarChart extends React.Component{
                             ...prevState.dataChart,
                             labels: this.getXAxes(customResponse.recovered),
                             datasets: [{
-                                label: 'Cumulation Recovered',
+                                label: 'Cumulative Recovers',
                                 backgroundColor: '#1ea04c',
                                 fill: false,
                                 data:  this.getYAxes(customResponse.recovered)
