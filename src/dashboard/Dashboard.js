@@ -86,9 +86,9 @@ class Dashboard extends React.Component{
                 <CustomHeader lastUpdate={this.state.lastUpdate}/>
                 <br/>
                 <div className='card-container'>
-                    <CustomCard icon='fa fa-certificate' title='Total Cases' count={this.state.countCases} todayReport={120} subtitle='new cases' />
+                    <CustomCard icon='fa fa-certificate' title='Total Cases' count={this.state.countCases} todayReport={this.state.todayCases} subtitle='new cases' />
                     &nbsp;
-                    <CustomCard img={deathIcon} title='Total Deaths' count={this.state.countDeaths} todayReport={4} subtitle='new deaths' />
+                    <CustomCard img={deathIcon} title='Total Deaths' count={this.state.countDeaths} todayReport={this.state.todayDeaths} subtitle='new deaths' />
                     &nbsp;
                     <CustomCard icon='fa fa-heartbeat' title='Total Recovers' count={this.state.countRecovered}/>
                     &nbsp;
