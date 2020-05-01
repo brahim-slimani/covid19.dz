@@ -1,8 +1,10 @@
 import axios from 'axios';
-const PREFIX_API_NOVEL="https://corona.lmao.ninja/v2";
+const PREFIX_API_NOVEL="https://disease.sh/v2";
 const PREFIX_API_HDZ="https://api.healthdz.com";
 
+
 class CallService {
+
 
     getCountryCovid(country){
         return axios.get(PREFIX_API_NOVEL+'/countries/'+country);
