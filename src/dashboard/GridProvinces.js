@@ -27,15 +27,6 @@ class GridProvinces extends React.Component {
         });
     }
 
-    getXAxes = (data) => {
-        let result = Object.entries(data).map(( [k, v] ) => k);
-        return result;
-    }
-
-    getYAxes = (data) => {
-        let result = Object.entries(data).map(( [k, v] ) => v);
-        return result;
-    }
 
 
     itemTemplate = (item) => {

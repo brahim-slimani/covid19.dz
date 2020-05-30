@@ -55,9 +55,6 @@ class CovidRankDeath extends Component {
     }
 
     render() {
-        {
-            console.log(this.state.data)
-        }
         return (
             <div className='rank-container'>
                 {this.state.data != null ?

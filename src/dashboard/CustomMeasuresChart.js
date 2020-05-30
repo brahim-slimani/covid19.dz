@@ -77,6 +77,7 @@ function CustomMesauresChart(props) {
     }
 
 
+
     return (
         <Panel header={props.title} className="chart-content">
             {cases?.length ? <Chart type="line" data={dataChart}/> : <CustomProgress type='spinner'/>}
