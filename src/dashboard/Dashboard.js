@@ -9,6 +9,8 @@ import CovidDoughnutChart from "./CovidDoughnutChart";
 import GridCountries from "./GridCountries";
 import GridProvinces from "./GridProvinces";
 import CovidRankDeath from "./CovidRankDeath";
+import {CustomMesauresChart} from "./CustomMeasuresChart";
+import DailyChartReport from "./DailyChartReport";
 
 class Dashboard extends React.Component{
 
@@ -19,8 +21,37 @@ class Dashboard extends React.Component{
             countDeaths: null,
             countRecovered: null,
             countActive: null,
-            lastUpdate: null
+            todayCases: null,
+            todayDeaths: null,
+            lastUpdate: null,
         }
+    }
+
+    getXAxes = (data) => {
+        // let result = Object.entries(data).map(( [k, v] ) => (k));
+        let result = Object.entries(data).map(( [k, v] ) => {
+            if(v != 0){
+                return k;
+            }
+        });
+        result = result.filter(function (x) {
+            return x !== undefined;
+        });
+        return result;
+    }
+
+    getYAxes = (data) => {
+        //let result = Object.entries(data).map(( [k, v] ) => ({ [k]: v }));
+        let result = Object.entries(data).map(( [k, v] ) => {
+            if(v != 0){
+                return v;
+            }
+        });
+        result = result.filter(function (x) {
+            return x !== undefined;
+        });
+
+        return result;
     }
 
     componentDidMount() {
@@ -30,12 +61,15 @@ class Dashboard extends React.Component{
                 countDeaths:response.data.deaths,
                 countRecovered:response.data.recovered,
                 countActive:response.data.active,
+                todayCases: response.data.todayCases,
+                todayDeaths: response.data.todayDeaths,
                 lastUpdate: 'last update : ' + this.timespanToDatetime(response.data.updated)
             });
         }).catch(error => {
             console.log(error);
             alert(error);
-        })
+        });
+
     }
 
     timespanToDatetime = (doubleDate) => {
@@ -53,11 +87,11 @@ class Dashboard extends React.Component{
                 <CustomHeader lastUpdate={this.state.lastUpdate}/>
                 <br/>
                 <div className='card-container'>
-                    <CustomCard icon='fa fa-certificate' title='Confirmed Cases' count={this.state.countCases} color="red"/>
+                    <CustomCard icon='fa fa-certificate' title='Total Cases' count={this.state.countCases} todayReport={this.state.todayCases} subtitle='new cases' color="red"/>
                     &nbsp;
-                    <CustomCard img={deathIcon} title='Deaths' count={this.state.countDeaths} color="white"/>
+                    <CustomCard img={deathIcon} title='Total Deaths' count={this.state.countDeaths} todayReport={this.state.todayDeaths} subtitle='new deaths' color="white"/>
                     &nbsp;
-                    <CustomCard icon='fa fa-heartbeat' title='Recovered' count={this.state.countRecovered} color="#1ea04c"/>
+                    <CustomCard icon='fa fa-heartbeat' title='Total Recovers' count={this.state.countRecovered} color="#1ea04c"/>
                     &nbsp;
                     <CustomCard img={bioIcon} title='Active Cases' count={this.state.countActive} color="#ffde00"/>
                 </div>
@@ -72,11 +106,11 @@ class Dashboard extends React.Component{
                 </div>
 
                 <div className="chart-container">
+                    <CustomMesauresChart title= 'Comparative Report' perimeter='Algeria'/>
+                    &nbsp;
                     <CovidDoughnutChart title='Today Situation' type='today' perimeter='Algeria'/>
                     &nbsp;
                     <CovidDoughnutChart title='Global Situation' type='global' perimeter='Algeria'/>
-                    &nbsp;
-                    <div className="chart-content" />
                 </div>
                 {/*<div className="chart-container">
                     <WilayaChart title='Cases % Wilaya' type='confirmed'/>
@@ -99,11 +133,11 @@ class Dashboard extends React.Component{
                 </div>
 
                 <div className="chart-container">
+                    <CustomMesauresChart title= 'Comparative Report' perimeter='all'/>
+                    &nbsp;
                     <CovidDoughnutChart title='Today Situation' type='today' perimeter='world'/>
                     &nbsp;
                     <CovidDoughnutChart title='Global Situation' type='global' perimeter='world'/>
-                    &nbsp;
-                    <div className="chart-content" />
                 </div>
 
                 <CovidRankDeath />

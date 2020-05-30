@@ -48,9 +48,7 @@ class CovidBarChart extends React.Component{
 
         //temporary static solution for ecart recovered timelines
         if(this.props.type == 'recovered' && this.props.perimeter == 'Algeria'){
-            result[0] = 24;
-            result[1] = 24;
-
+            result[24] = 4630;
         }
         return result;
     }
@@ -67,7 +65,7 @@ class CovidBarChart extends React.Component{
                             ...prevState.dataChart,
                             labels: this.getXAxes(customResponse.cases),
                             datasets: [{
-                                label: 'Cumulation cases',
+                                label: 'Cumulative cases',
                                 backgroundColor: '#ed1d24',
                                 fill: false,
                                 data:  this.getYAxes(customResponse.cases)
@@ -81,7 +79,7 @@ class CovidBarChart extends React.Component{
                             ...prevState.dataChart,
                             labels: this.getXAxes(customResponse.deaths),
                             datasets: [{
-                                label: 'Cumulation Deaths',
+                                label: 'Cumulative Deaths',
                                 backgroundColor: '#000000',
                                 fill: false,
                                 data:  this.getYAxes(customResponse.deaths)
@@ -95,7 +93,7 @@ class CovidBarChart extends React.Component{
                             ...prevState.dataChart,
                             labels: this.getXAxes(customResponse.recovered),
                             datasets: [{
-                                label: 'Cumulation Recovered',
+                                label: 'Cumulative Recovers',
                                 backgroundColor: '#1ea04c',
                                 fill: false,
                                 data:  this.getYAxes(customResponse.recovered)
