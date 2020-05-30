@@ -61,7 +61,7 @@ class GridProvinces extends React.Component {
         let searchedWilayas = wilayas.filter(wilaya =>
             wilaya.fr.toLowerCase().includes(event.target.value.toLowerCase())
             || wilaya.ar.toLowerCase().includes(event.target.value.toLowerCase())
-            || wilaya.code.toString().toLowerCase().includes(event.target.value.toLowerCase()));
+            /*|| wilaya.code.toString().toLowerCase().includes(event.target.value.toLowerCase())*/);
         this.setState({wilayasCovid: searchedWilayas});
     }
 
