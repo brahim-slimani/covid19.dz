@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "821cf5edb8832319ca69f483a9232e83",
+    "revision": "a360ad1f59b82d2fe4572166593735dc",
     "url": "/covid19.dz/index.html"
   },
   {
-    "revision": "b7ca8513214784456911",
+    "revision": "3010164c696b26d0622a",
     "url": "/covid19.dz/static/css/2.3b4a80e9.chunk.css"
   },
   {
-    "revision": "8f21a1a56fd191b88387",
-    "url": "/covid19.dz/static/css/main.ab510621.chunk.css"
+    "revision": "a31326a83918e770e828",
+    "url": "/covid19.dz/static/css/main.4b4e81ca.chunk.css"
   },
   {
-    "revision": "b7ca8513214784456911",
-    "url": "/covid19.dz/static/js/2.d4b441bc.chunk.js"
+    "revision": "3010164c696b26d0622a",
+    "url": "/covid19.dz/static/js/2.5962b411.chunk.js"
   },
   {
     "revision": "13767bda7e58db6e95d0e3d841e04d61",
-    "url": "/covid19.dz/static/js/2.d4b441bc.chunk.js.LICENSE.txt"
+    "url": "/covid19.dz/static/js/2.5962b411.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8f21a1a56fd191b88387",
-    "url": "/covid19.dz/static/js/main.191e8dd7.chunk.js"
+    "revision": "a31326a83918e770e828",
+    "url": "/covid19.dz/static/js/main.0fbcefcb.chunk.js"
   },
   {
     "revision": "02e4fd68c91cbb29440d",
@@ -32,8 +32,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/covid19.dz/static/media/algeria-flag.6bb826dc.png"
   },
   {
-    "revision": "e4fbaebb5cc9725504729a2752b47ab9",
-    "url": "/covid19.dz/static/media/bio-danger-icon.e4fbaebb.png"
+    "revision": "33985a5d33a0f2492628168a96ce023e",
+    "url": "/covid19.dz/static/media/bio-danger-yellow.33985a5d.png"
   },
   {
     "revision": "c7a33805ffda0d32bd2a9904c8b02750",
