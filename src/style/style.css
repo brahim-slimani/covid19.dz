@@ -72,6 +72,7 @@ body {
 .subcard-dashboard {
     display: inline-flex;
     margin-left: 20px;
+    width: 100%;
 }
 
 .contentCard {
@@ -106,7 +107,7 @@ body {
     display: inline-flex;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
     .card-container {
         display: block;
         width: 90%;
@@ -134,6 +135,15 @@ body {
         font-size: 14px !important;
         margin-bottom: 10px !important;
     }
+
+    .col-md-3 {
+        flex: 0 0 25%;
+        max-width: 100% !important;
+    }
+}
+
+.col-lg-3 {
+    flex: 0 0 24.5% !important;
 }
 
 
@@ -194,4 +204,15 @@ body {
 .p-datatable-row:hover {
     background-color: #1ea04c !important;
     cursor: pointer;
+}
+
+/*floating button style*/
+.dWAVVT{
+    position: fixed !important;
+}
+
+.debaco{
+    position: fixed;
+    background-color: #1ea04c !important;
+    margin-top: -10px;
 }

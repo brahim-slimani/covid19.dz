@@ -10,6 +10,7 @@ import GridCountries from "./GridCountries";
 import GridProvinces from "./GridProvinces";
 import CovidRankDeath from "./CovidRankDeath";
 import {CustomMesauresChart} from "./CustomMeasuresChart";
+import DailyChartReport from "./DailyChartReport";
 
 class Dashboard extends React.Component{
 
