@@ -9,7 +9,7 @@ function CustomFooter(props) {
             <div className="container-fluid text-center text-md-left">
 
 
-                <div className="row">
+                <div className="row content-footer">
 
 
                     <div className="col-md-6 mt-md-0 mt-3">
@@ -39,8 +39,9 @@ function CustomFooter(props) {
                                 </li>
                                 <li>
                                     <i className="fa fa-envelope-square"/>&nbsp;
-                                    <a>slimani.ibr@gmail.com</a>
+                                    <a href="mailto:slimani.ibr@gmail.com" >slimani.ibr@gmail.com</a>
                                 </li>
+
                             </ul>
 
                         </div>
@@ -49,7 +50,7 @@ function CustomFooter(props) {
 
             </div>
 
-            <div className="footer-copyright text-center py-3">© 2020 Copyright. Realised by Slimani Ibrahim
+            <div className="footer-copyright text-center py-3">© 2020 Copyright. Realised by Ibrahim Slimani
         </div>
 
         </footer>
