@@ -21,7 +21,10 @@ class GridProvinces extends React.Component {
 
     componentDidMount() {
         CovidService.getWilayasCovid().then(response => {
-            this.setState({wilayasCovid: response.data, wilayaFilter: response.data})
+            let result = response.data.filter(function (item) {
+                return item.fr !== 'National';
+            });
+            this.setState({wilayasCovid: result, wilayaFilter: result})
         }).catch(error => {
             console.log(error);
         });
@@ -33,7 +36,7 @@ class GridProvinces extends React.Component {
         return (
             <div className="p-col-3 card-country">
                 {item != null &&
-                <Panel header={item.fr+' '+item.ar+' '+item.code} style={{textAlign: 'center'}}>
+                <Panel header={item.fr+' '+item.ar} style={{textAlign: 'center'}}>
                     <div><i className="fa fa-certificate"/>&nbsp;Confirmed Cases : {item.confirmed}</div>
                     {/*<div><i className="fa fa-mars"/>&nbsp;Male : {item.males} &nbsp;<i className="fa fa-venus"/> &nbsp;Female : {item.females} </div>*/}
                     {/*<div><i className="fa fa-heartbeat"/>&nbsp;Recovered : {item.recovers}</div>*/}
@@ -58,7 +61,7 @@ class GridProvinces extends React.Component {
         let searchedWilayas = wilayas.filter(wilaya =>
             wilaya.fr.toLowerCase().includes(event.target.value.toLowerCase())
             || wilaya.ar.toLowerCase().includes(event.target.value.toLowerCase())
-            || wilaya.code.toString().toLowerCase().includes(event.target.value.toLowerCase()));
+            /*|| wilaya.code.toString().toLowerCase().includes(event.target.value.toLowerCase())*/);
         this.setState({wilayasCovid: searchedWilayas});
     }
 
@@ -70,7 +73,7 @@ class GridProvinces extends React.Component {
                 <div><strong className="title-covid-world">{this.props.title}</strong></div>
                 <p/>
 
-                <CustomInputFilter hint='Search wilaya' onChange={this.handleSearch}/>
+                <CustomInputFilter hint='Search province' onChange={this.handleSearch}/>
 
                 {this.state.wilayasCovid != null ?
                     <DataView value={this.state.wilayasCovid}
