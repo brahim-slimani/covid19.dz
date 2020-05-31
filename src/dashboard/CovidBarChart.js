@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React from "react";
 import {Panel} from "primereact/panel";
 import CovidService from "../service/CovidService";
 import {Chart} from "primereact/chart";
@@ -25,7 +25,7 @@ class CovidBarChart extends React.Component{
     getXAxes = (data) => {
         // let result = Object.entries(data).map(( [k, v] ) => (k));
         let result = Object.entries(data).map(( [k, v] ) => {
-          if(v != 0){
+          if(v !== 0){
               return k;
           }
         });
@@ -38,7 +38,7 @@ class CovidBarChart extends React.Component{
     getYAxes = (data) => {
         //let result = Object.entries(data).map(( [k, v] ) => ({ [k]: v }));
         let result = Object.entries(data).map(( [k, v] ) => {
-            if(v != 0){
+            if(v !== 0){
                 return v;
             }
         });
@@ -48,7 +48,7 @@ class CovidBarChart extends React.Component{
 
         //temporary static solution for ecart recovered timelines
         if(this.props.type == 'recovered' && this.props.perimeter == 'Algeria'){
-            result[24] = 4630;
+            //result[23] = 4630;
         }
         return result;
     }
