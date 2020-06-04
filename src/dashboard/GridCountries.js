@@ -71,7 +71,6 @@ class GridCountries extends React.Component {
             <div className="countries-grid-content">
                 <br/>
                 <div><strong className="title-covid-world">{this.props.title}</strong></div>
-                <p/>
 
                 <CustomInputFilter hint='Search country' onChange={this.handleSearch}/>
 
