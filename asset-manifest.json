@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/covid19.dz/static/css/main.b7f7e5cd.chunk.css",
-    "main.js": "/covid19.dz/static/js/main.4606dc41.chunk.js",
+    "main.js": "/covid19.dz/static/js/main.2d401dc2.chunk.js",
     "runtime-main.js": "/covid19.dz/static/js/runtime-main.8a8e367d.js",
     "static/css/2.3b4a80e9.chunk.css": "/covid19.dz/static/css/2.3b4a80e9.chunk.css",
     "static/js/2.5962b411.chunk.js": "/covid19.dz/static/js/2.5962b411.chunk.js",
     "index.html": "/covid19.dz/index.html",
-    "precache-manifest.04c368238394b0ba5bad2bca44ab1bcd.js": "/covid19.dz/precache-manifest.04c368238394b0ba5bad2bca44ab1bcd.js",
+    "precache-manifest.6275732ba9334793cc44461218f4e933.js": "/covid19.dz/precache-manifest.6275732ba9334793cc44461218f4e933.js",
     "service-worker.js": "/covid19.dz/service-worker.js",
     "static/js/2.5962b411.chunk.js.LICENSE.txt": "/covid19.dz/static/js/2.5962b411.chunk.js.LICENSE.txt",
     "static/media/algeria-flag.png": "/covid19.dz/static/media/algeria-flag.6bb826dc.png",
@@ -23,6 +23,6 @@
     "static/css/2.3b4a80e9.chunk.css",
     "static/js/2.5962b411.chunk.js",
     "static/css/main.b7f7e5cd.chunk.css",
-    "static/js/main.4606dc41.chunk.js"
+    "static/js/main.2d401dc2.chunk.js"
   ]
 }
