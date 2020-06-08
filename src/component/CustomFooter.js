@@ -15,20 +15,20 @@ function CustomFooter(props) {
                         <h5 className="text-uppercase">Contact</h5>
                         <ul className="list-unstyled">
                             <li>
-                                <i className="fa fa-globe" />&nbsp;
-                                    <a href="https://slimani-ibrahim.github.io/profile/" target="_blank">ibrahim-slimani.com</a>
-                            </li>
-                            <li>
                                 <i className="fa fa-linkedin-square" />&nbsp;
-                                    <a href="https://www.linkedin.com/in/ibrahim-slimani-184161b2/" target="_blank">Slimani Ibrahim</a>
+                                    <a href="https://www.linkedin.com/in/ibrahim-slimani-184161b2/" target="_blank">Ibrahim Slimani</a>
                             </li>
                             <li>
                                 <i className="fa fa-github-square" />&nbsp;
-                                    <a href="https://github.com/Slimani-Ibrahim" target="_blank">Slimani Ibrahim</a>
+                                    <a href="https://github.com/Slimani-Ibrahim" target="_blank">Ibrahim Slimani</a>
                             </li>
                             <li>
                                 <i className="fa fa-envelope-square" />&nbsp;
                                     <a href="mailto:slimani.ibr@gmail.com" >slimani.ibr@gmail.com</a>
+                            </li>
+                            <li>
+                                <i className="fa fa-globe" />&nbsp;
+                                    <a href="https://slimani-ibrahim.github.io/profile/" target="_blank">www.ibrahim-slimani.com</a>
                             </li>
                         </ul>
                     </div>

@@ -55,8 +55,8 @@ class CovidBarChart extends React.Component{
 
 
     componentDidMount() {
-        var prefixUrl = this.props.perimeter == 'world' ? 'all' : 'Algeria';
-        CovidService.getHistoricalCovid(prefixUrl).then(response => {
+        var sufixUrl = this.props.perimeter == 'world' ? 'all' : 'Algeria';
+        CovidService.getHistoricalCovid(sufixUrl).then(response => {
             let customResponse = this.props.perimeter == 'world' ? response.data : response.data.timeline;
             switch (this.props.type) {
                 case 'cases' :
