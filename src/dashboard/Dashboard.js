@@ -1,8 +1,8 @@
 import React from "react";
 import { CustomCard } from "../component/CustomCard";
 import CustomHeader from "../component/CustomHeader";
-import deathIcon from "../style/img/death-icon.png";
-import bioIcon from "../style/img/bio-danger-yellow.png";
+import deathIcon from "../assets/img/death-icon.png";
+import bioIcon from "../assets/img/bio-danger-yellow.png";
 import CovidService from "../service/CovidService";
 import CovidBarChart from "./CovidBarChart";
 import CovidDoughnutChart from "./CovidDoughnutChart";
@@ -84,14 +84,14 @@ class Dashboard extends React.Component {
     render() {
         return (
             <div className="App">
-                <CustomHeader lastUpdate={this.state.lastUpdate} />
+                {/* <CustomHeader lastUpdate={this.state.lastUpdate} /> */}
                 <br />
                 <div className='card-container'>
                     <CustomCard icon='fa fa-certificate' title='Total Cases' count={this.state.countCases} todayReport={this.state.todayCases} subtitle='new cases' color="red" />
                     &nbsp;
                     <CustomCard img={deathIcon} title='Total Deaths' count={this.state.countDeaths} todayReport={this.state.todayDeaths} subtitle='new deaths' color="white" />
                     &nbsp;
-                    <CustomCard icon='fa fa-heartbeat' title='Total Recovers' count={this.state.countRecovered} color="#1ea04c" />
+                    <CustomCard icon='fa fa-heartbeat' title='Total Recovers' count={this.state.countRecovered} color="#00ff00" />
                     &nbsp;
                     <CustomCard img={bioIcon} title='Active Cases' count={this.state.countActive} color="#ffde00" />
                 </div>
@@ -102,7 +102,7 @@ class Dashboard extends React.Component {
                     &nbsp;
                     <DailyChartReport title="Daily deaths report" type="deaths" label="deaths" country="algeria" color="black" />
                     &nbsp;
-                    <DailyChartReport title="Daily recovers report" type="recovered" label="recovers" country="algeria" color="green" />
+                    <DailyChartReport title="Daily recovers report" type="recovered" label="recovers" country="algeria" color="#00ff00" />
                 </div>
 
                 {/* <div className="chart-container">
@@ -146,12 +146,12 @@ class Dashboard extends React.Component {
                     &nbsp;
                     <DailyChartReport title="Daily deaths report" type="deaths" label="deaths" country="all" color="black" />
                     &nbsp;
-                    <DailyChartReport title="Daily recovers report" type="recovered" label="recovers" country="all" color="green" />
+                    <DailyChartReport title="Daily recovers report" type="recovered" label="recovers" country="all" color="#00ff00" />
                 </div>
 
 
                 <div className="chart-container">
-                    <CustomMesauresChart title='Comparative Report' perimeter='all' />
+                    <CustomMesauresChart title='Comparative cumulations report' perimeter='all' />
                     &nbsp;
                     <CovidDoughnutChart title='Global Situation' type='global' perimeter='world' />
                     &nbsp;

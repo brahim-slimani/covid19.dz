@@ -1,6 +1,6 @@
-/*styling app*/
+/*** master ***/
 .App-logo {
-    height: 10vmin;
+    height: 6vmin;
     pointer-events: none;
 }
 
@@ -30,6 +30,23 @@
 .low-head {
     font-size: 12px;
 }
+
+.custom-header {
+    background: #191919;
+    position: fixed !important;
+    width: 100%;
+    z-index: 10;
+}
+
+.nav-title {
+    color: #00ff00 !important;
+}
+
+.right-nav a {
+    color: #00ff00 !important;
+}
+
+
 
 @media (prefers-reduced-motion: no-preference) {
     .App-logo {
@@ -61,7 +78,7 @@ body {
     background-color: #282c34 !important;
 }
 
-/*styling dashboard card*/
+/*** dashboard card ***/
 
 .card-dashboard{
   background-color: #191919;
@@ -98,6 +115,7 @@ body {
     display: inline-flex;
     width: 90%;
     justify-content: space-between;
+    margin-top: 50px;
 }
 
 .new-situation-span {
@@ -158,7 +176,7 @@ body {
 }
 
 
-/*styling dashboard chart*/
+/*** dashboard chart ***/
 .chart-container {
     display: inline-flex;
     width: 90%;
@@ -180,7 +198,7 @@ body {
     font-size: 30px;
 }
 
-/*styling filter input*/
+/*** filter input ***/
 .filter-inputtext {
     border-radius: 0 50px 50px 0 !important;
     width: 100% !important;
@@ -194,7 +212,7 @@ body {
     margin: 8px;
 }
 
-/* styling rank table */
+/*** ranking table ***/
 .rank-container {
     width: 90%;
     margin: 20px 0 20px 0;
@@ -213,11 +231,11 @@ body {
 }
 
 .p-datatable-row:hover {
-    background-color: #1ea04c !important;
+    background-color: #1ac21d !important;
     cursor: pointer;
 }
 
-/*floating button style*/
+/*** floating button style ***/
 .dWAVVT{
     position: fixed !important;
 }
@@ -226,4 +244,15 @@ body {
     position: fixed;
     background-color: #1ea04c !important;
     margin-top: -10px;
+}
+
+/*** footer ***/
+footer a {
+    color: #00ff00 !important;
+}
+
+/*** common ***/
+body .p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+    background-color: #34A835 !important;
+    color: #ffffff;
 }

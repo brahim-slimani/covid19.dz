@@ -61,7 +61,7 @@ class CovidDoughnutChart extends React.Component{
                             backgroundColor: [
                                 "#ed1d24",
                                 "#000000",
-                                "#1ea04c"
+                                "#00ff00"
                             ],
                         }],
                     }
@@ -80,7 +80,7 @@ class CovidDoughnutChart extends React.Component{
                             backgroundColor: [
                                 "#ed1d24",
                                 "#000000",
-                                "#1ea04c"
+                                "#00ff00"
                             ],
                         }],
                     }

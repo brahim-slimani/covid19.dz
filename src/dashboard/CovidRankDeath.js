@@ -21,13 +21,14 @@ class CovidRankDeath extends Component {
     ]
 
     dealRankingData = (data) => {
+        let prefix = "https://corona.lmao.ninja";
         let result = new Array();
         data.map((item) => {
             var deathReport = (item.deaths / item.cases) * 100;
             result.push(
                 {
                     rank: 0,
-                    flag : <img src={item.countryInfo.flag} height={30} style={{borderRadius: 7}}/>,
+                    flag : <img src={prefix+item.countryInfo.flag.substr(18, item.countryInfo.flag.size)} height={30} style={{borderRadius: 7}}/>,
                     country: item.country,
                     deathPercent: deathReport.toFixed(2)
                 }
