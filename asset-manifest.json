@@ -1,28 +1,29 @@
 {
   "files": {
-    "main.css": "/covid19.dz/static/css/main.b66d8463.chunk.css",
-    "main.js": "/covid19.dz/static/js/main.5b929ce1.chunk.js",
+    "main.css": "/covid19.dz/static/css/main.39ee81d7.chunk.css",
+    "main.js": "/covid19.dz/static/js/main.9fc518df.chunk.js",
     "runtime-main.js": "/covid19.dz/static/js/runtime-main.8a8e367d.js",
     "static/css/2.3b4a80e9.chunk.css": "/covid19.dz/static/css/2.3b4a80e9.chunk.css",
-    "static/js/2.9ce9c527.chunk.js": "/covid19.dz/static/js/2.9ce9c527.chunk.js",
+    "static/js/2.c90952b1.chunk.js": "/covid19.dz/static/js/2.c90952b1.chunk.js",
     "index.html": "/covid19.dz/index.html",
-    "precache-manifest.54449ac26dc15e171e98ad8379468513.js": "/covid19.dz/precache-manifest.54449ac26dc15e171e98ad8379468513.js",
+    "precache-manifest.708302b24ba74a25582c3156cd4ae238.js": "/covid19.dz/precache-manifest.708302b24ba74a25582c3156cd4ae238.js",
     "service-worker.js": "/covid19.dz/service-worker.js",
-    "static/js/2.9ce9c527.chunk.js.LICENSE.txt": "/covid19.dz/static/js/2.9ce9c527.chunk.js.LICENSE.txt",
+    "static/js/2.c90952b1.chunk.js.LICENSE.txt": "/covid19.dz/static/js/2.c90952b1.chunk.js.LICENSE.txt",
     "static/media/algeria-flag.png": "/covid19.dz/static/media/algeria-flag.6bb826dc.png",
     "static/media/bio-danger-yellow.png": "/covid19.dz/static/media/bio-danger-yellow.33985a5d.png",
     "static/media/primereact.min.css": "/covid19.dz/static/media/line.567f5738.gif",
-    "static/media/covid-icon.png": "/covid19.dz/static/media/covid-icon.dd3920c9.png",
+    "static/media/covid.png": "/covid19.dz/static/media/covid.5325b387.png",
     "static/media/font-awesome.min.css": "/covid19.dz/static/media/fontawesome-webfont.fee66e71.woff",
     "static/media/theme.css": "/covid19.dz/static/media/open-sans-v15-latin-regular.cffb686d.woff2",
     "static/media/primeicons.css": "/covid19.dz/static/media/primeicons.e5e0e944.svg",
+    "static/media/safe.png": "/covid19.dz/static/media/safe.c12642e9.png",
     "static/media/world-icon.png": "/covid19.dz/static/media/world-icon.c1dd1584.png"
   },
   "entrypoints": [
     "static/js/runtime-main.8a8e367d.js",
     "static/css/2.3b4a80e9.chunk.css",
-    "static/js/2.9ce9c527.chunk.js",
-    "static/css/main.b66d8463.chunk.css",
-    "static/js/main.5b929ce1.chunk.js"
+    "static/js/2.c90952b1.chunk.js",
+    "static/css/main.39ee81d7.chunk.css",
+    "static/js/main.9fc518df.chunk.js"
   ]
 }
