@@ -3,17 +3,17 @@
   "name": "Dashboard COVID19 in Algeria",
   "icons": [
     {
-      "src": "covid-icon.png",
+      "src": "covid.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "covid-icon.png",
+      "src": "covid.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "covid-icon.png",
+      "src": "covid.png",
       "type": "image/png",
       "sizes": "512x512"
     }

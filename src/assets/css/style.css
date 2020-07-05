@@ -40,13 +40,16 @@
 
 .nav-title {
     color: #00ff00 !important;
+    display: inline-flex !important;
 }
 
 .right-nav a {
     color: #00ff00 !important;
 }
 
-
+.mobile-title {
+    display:  none;
+}
 
 @media (prefers-reduced-motion: no-preference) {
     .App-logo {
@@ -78,7 +81,75 @@ body {
     background-color: #282c34 !important;
 }
 
+/*** advise modal ***/
+
+.advice-card {
+    display: block;
+    margin-top: 40px;
+    width: 50%;
+    border: 1px solid;
+}
+
+.advice-content {
+    display: inline-flex;
+}
+
+.advice-content .icon-advice {
+    height: 70px;
+    border: 1px solid;
+    border-radius: 50px;
+    padding: 12px;
+}
+
+.advice-content .advice-avatar {
+    margin: 0 20px 20px 20px;
+    display: grid;
+    text-align: -webkit-center;
+}
+
+.advice-card .hashtag {
+    margin-bottom: 10px;
+    background-color: red;
+} 
+
+.advice-content .advice-avatar i {
+    font-size: 16px;
+}
+
+.close-btn {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1;
+    color: white !important;
+    text-shadow: 0 1px 0 #fff;
+    opacity: 0.7;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  .close-btn:hover {
+    opacity: 1;
+    font-weight: 700;
+    
+  }
+  
+  .fade-out {
+    position: relative; 
+    animation: fadeOut ease 2s;
+  }
+  @keyframes fadeOut {
+    from {top:0px; opacity: 0;}
+    to {top:-200px; opacity: 1;}
+  }
+  
+
 /*** dashboard card ***/
+
+.card-parent {
+    margin-top: 50px;
+    width: 100%;
+    text-align: -webkit-center;;
+}
 
 .card-dashboard{
   background-color: #191919;
@@ -115,7 +186,6 @@ body {
     display: inline-flex;
     width: 90%;
     justify-content: space-between;
-    margin-top: 50px;
 }
 
 .new-situation-span {
@@ -169,6 +239,35 @@ body {
     .content-footer {
         justify-content: center;
     }
+
+    .desktop-title {
+        display: none;
+    }
+
+    .mobile-title {
+        display: block;
+    }
+
+    .advice-card {
+        width: 90%;
+    }
+
+    .advice-card .hashtag {
+        font-size: 12px;
+    }
+
+    .advice-content .icon-advice {
+        height: 60px;
+    }
+
+    .advice-content .advice-avatar i {
+        font-size: 8px;
+    }
+
+    .advice-content .advice-avatar {
+        margin: 0 5px 20px 5px; 
+    }
+
 }
 
 .col-lg-3 {

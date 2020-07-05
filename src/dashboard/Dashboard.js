@@ -1,16 +1,15 @@
 import React from "react";
 import { CustomCard } from "../component/CustomCard";
-import CustomHeader from "../component/CustomHeader";
 import deathIcon from "../assets/img/death-icon.png";
 import bioIcon from "../assets/img/bio-danger-yellow.png";
 import CovidService from "../service/CovidService";
-import CovidBarChart from "./CovidBarChart";
 import CovidDoughnutChart from "./CovidDoughnutChart";
 import GridCountries from "./GridCountries";
 import GridProvinces from "./GridProvinces";
 import CovidRankDeath from "./CovidRankDeath";
 import { CustomMesauresChart } from "./CustomMeasuresChart";
 import DailyChartReport from "./DailyChartReport";
+import AdviceCard from "../component/AdviceCard";
 
 class Dashboard extends React.Component {
 
@@ -85,6 +84,8 @@ class Dashboard extends React.Component {
         return (
             <div className="App">
                 {/* <CustomHeader lastUpdate={this.state.lastUpdate} /> */}
+                <div className="card-parent">
+                <AdviceCard />
                 <br />
                 <div className='card-container'>
                     <CustomCard icon='fa fa-certificate' title='Total Cases' count={this.state.countCases} todayReport={this.state.todayCases} subtitle='new cases' color="red" />
@@ -95,6 +96,8 @@ class Dashboard extends React.Component {
                     &nbsp;
                     <CustomCard img={bioIcon} title='Active Cases' count={this.state.countActive} color="#ffde00" />
                 </div>
+                </div>
+               
                 <br />
 
                 <div className="chart-container">

@@ -16,7 +16,9 @@ function CustomHeader(props) {
         <nav class="navbar navbar-light custom-header">
             <a class="navbar-brand nav-title" href="index">
                 <img src={logo} className="App-logo" alt="logo" />
-                &nbsp; COVID-19 Situation in Algeria
+                &nbsp; 
+                <span className="desktop-title">COVID-19 Situation in Algeria</span>
+                <span className="mobile-title">COVID-19 DZ</span>
                 </a>
 
             <div class="right-nav">
