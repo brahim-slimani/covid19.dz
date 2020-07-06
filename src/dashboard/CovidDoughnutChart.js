@@ -29,7 +29,7 @@ class CovidDoughnutChart extends React.Component{
                 axes = ['active cases','deaths','recovered'];
                 break;
             case 'today':
-                axes = ['new cases','deaths'];
+                axes = ['new cases','deaths', 'recovered'];
                 break;
         }
         return axes;
@@ -42,7 +42,7 @@ class CovidDoughnutChart extends React.Component{
                 axes = [data.active, data.deaths, data.recovered];
                 break;
             case 'today':
-                axes = [data.todayCases, data.todayDeaths];
+                axes = [data.todayCases, data.todayDeaths, data.todayRecovered];
                 break;
         }
         return axes;
