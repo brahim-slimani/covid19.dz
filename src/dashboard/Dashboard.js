@@ -132,7 +132,7 @@ class Dashboard extends React.Component {
                     <div className="chart-content" />
                 </div>*/}
 
-                <GridProvinces title="Situation in Provinces" viewport={window.innerWidth > 500 ? "desktop" : "mobile"} />
+                {/* <GridProvinces title="Situation in Provinces" viewport={window.innerWidth > 500 ? "desktop" : "mobile"} /> */}
 
                 <GridCountries title="COVID-19 around the world" viewport={window.innerWidth > 500 ? "desktop" : "mobile"} />
 

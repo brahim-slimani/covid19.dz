@@ -47,7 +47,8 @@ class GridCountries extends React.Component {
                 {item != null &&
                 <Panel header={item.country} style={{textAlign: 'center'}}>
                     {item.country == 'World' ? <img src={worldIcon} height={30}/> :
-                        <img src={prefix+item.countryInfo.flag.substr(18, item.countryInfo.flag.size)} height={30}/>}
+                        // <img src={prefix+item.countryInfo.flag.substr(18, item.countryInfo.flag.size)} height={30}/>
+                        <img src={item.countryInfo.flag} height={30}/>}
                     <br/>
                     <div><i className="fa fa-certificate"/>&nbsp;Confirmed Cases : {item.cases}</div>
                     <div><i className="fa fa-heartbeat"/>&nbsp;Recovered : {item.recovered}</div>

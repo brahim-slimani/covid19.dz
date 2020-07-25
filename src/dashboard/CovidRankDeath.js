@@ -28,7 +28,7 @@ class CovidRankDeath extends Component {
             result.push(
                 {
                     rank: 0,
-                    flag : <img src={prefix+item.countryInfo.flag.substr(18, item.countryInfo.flag.size)} height={30} style={{borderRadius: 7}}/>,
+                    flag : <img src={item.countryInfo.flag} height={30} style={{borderRadius: 7}}/>,
                     country: item.country,
                     deathPercent: deathReport.toFixed(2)
                 }

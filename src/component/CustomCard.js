@@ -13,7 +13,7 @@ const CustomCard = (props) => {
                 <div className='contentCard'>
                     <div style={{display:'inline-flex'}}>
                         {props.count != null ? <strong className='countCard'>{props.count}</strong> : <CustomProgress type="spinner"/>}
-                        {props.todayReport != 0 && props.todayReport != null && <span className="new-situation-span" style={{color:props.color}}>+({props.todayReport})<div style={{fontSize:9, marginTop:5}}>&nbsp;{props.subtitle}</div></span>}
+                        {props.todayReport != 0 && props.todayReport != null && <span className="new-situation-span" style={{color:props.color}}>+({props.todayReport})</span>}
                     </div>
 
                     <div className='title'>{props.title}</div>

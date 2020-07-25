@@ -48,7 +48,6 @@ class CovidBarChart extends React.Component{
 
         //temporary static solution for ecart recovered timelines
         if(this.props.type == 'recovered' && this.props.perimeter == 'Algeria'){
-            //result[23] = 4630;
         }
         return result;
     }
