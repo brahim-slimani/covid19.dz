@@ -59,6 +59,7 @@ function CustomMesauresChart(props) {
         result = result.filter(function (x) {
             return x !== undefined;
         });
+        result.shift();
         return result;
     }
 

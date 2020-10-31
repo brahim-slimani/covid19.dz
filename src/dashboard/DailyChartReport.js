@@ -55,6 +55,7 @@ export default function DailyChartReport(props) {
         result = result.filter(function (x) {
             return x !== undefined;
         });
+        result.shift();
         return result;
     };
 
@@ -77,7 +78,7 @@ export default function DailyChartReport(props) {
             }
             i++;
         }
-
+        console.info(result);
         return result;
 
     }
