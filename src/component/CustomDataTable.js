@@ -16,7 +16,7 @@ function CustomDataTable (props) {
 
     const header =
         <div className="header-table">
-            <div className="header-title-table"><strong>{props.title}</strong></div>
+            <div className="header-title-table"><>{props.title}</></div>
             <div className="input-group search-area  col-md-4" style={{marginLeft:'-15px'}}>
                 <div className="p-inputgroup" style={{width:'100%'}}>
                     <Button icon="pi pi-search" className="form-control p-button-success icon-button" />

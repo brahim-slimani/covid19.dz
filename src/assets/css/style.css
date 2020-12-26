@@ -184,7 +184,7 @@ body {
 
 .card-container {
     display: inline-flex;
-    width: 90%;
+    width: 95%;
     justify-content: space-between;
 }
 
@@ -268,6 +268,12 @@ body {
         margin: 0 5px 20px 5px; 
     }
 
+    /* float scroll btn */
+    .scroll-btn {
+       padding: 0px 2px 0px 0px !important;
+       background-color: #1ea04c !important;
+    }
+
 }
 
 .col-lg-3 {
@@ -278,7 +284,7 @@ body {
 /*** dashboard chart ***/
 .chart-container {
     display: inline-flex;
-    width: 90%;
+    width: 95%;
     margin-bottom: 10px;
 }
 
@@ -288,7 +294,7 @@ body {
 }
 
 .countries-grid-content {
-    width: 90%;
+    width: 95%;
     text-align: center;
     margin-top: 10px;
 }
@@ -313,7 +319,7 @@ body {
 
 /*** ranking table ***/
 .rank-container {
-    width: 90%;
+    width: 95%;
     margin: 20px 0 20px 0;
 }
 
@@ -325,7 +331,7 @@ body {
 }
 
 .header-title-table {
-    font-size: 20px;
+    font-size: 18px;
     margin-right: 40px;
 }
 

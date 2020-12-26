@@ -103,11 +103,11 @@ class Dashboard extends React.Component {
                 <br />
 
                 <div className="chart-container">
-                    <DailyChartReport title="Daily cases report" type="cases" label="cases" country="algeria" color="red" />
+                    <DailyChartReport title="Daily cases" type="cases" label="cases" country="algeria" color="red" />
                     &nbsp;
-                    <DailyChartReport title="Daily deaths report" type="deaths" label="deaths" country="algeria" color="black" />
+                    <DailyChartReport title="Daily deaths" type="deaths" label="deaths" country="algeria" color="black" />
                     &nbsp;
-                    <DailyChartReport title="Daily recovers report" type="recovered" label="recovers" country="algeria" color="#00ff00" />
+                    <DailyChartReport title="Daily recovers" type="recovered" label="recovers" country="algeria" color="#00ff00" />
                 </div>
 
                 {/* <div className="chart-container">
@@ -119,7 +119,7 @@ class Dashboard extends React.Component {
                 </div> */}
 
                 <div className="chart-container">
-                    <CustomMesauresChart title='Comparative cumulations report' perimeter='Algeria' />
+                    <CustomMesauresChart title='Cumulations' perimeter='Algeria' />
                     &nbsp;
                     <CovidDoughnutChart title='Global Situation' type='global' perimeter='Algeria' />
                     &nbsp;
@@ -147,16 +147,16 @@ class Dashboard extends React.Component {
                 </div> */}
 
                 <div className="chart-container">
-                    <DailyChartReport title="Daily cases report" type="cases" label="cases" country="all" color="red" />
+                    <DailyChartReport title="Daily cases" type="cases" label="cases" country="all" color="red" />
                     &nbsp;
-                    <DailyChartReport title="Daily deaths report" type="deaths" label="deaths" country="all" color="black" />
+                    <DailyChartReport title="Daily deaths" type="deaths" label="deaths" country="all" color="black" />
                     &nbsp;
-                    <DailyChartReport title="Daily recovers report" type="recovered" label="recovers" country="all" color="#00ff00" />
+                    <DailyChartReport title="Daily recovers" type="recovered" label="recovers" country="all" color="#00ff00" />
                 </div>
 
 
                 <div className="chart-container">
-                    <CustomMesauresChart title='Comparative cumulations report' perimeter='all' />
+                    <CustomMesauresChart title='Cumulations' perimeter='all' />
                     &nbsp;
                     <CovidDoughnutChart title='Global Situation' type='global' perimeter='world' />
                     &nbsp;
@@ -168,7 +168,8 @@ class Dashboard extends React.Component {
                 <ScrollTop
                     text={<i className="fa fa-arrow-up" />}
                     distance={90}
-                    style={{ backgroundColor: "#00ff00", border: "0.5px solid white", padding: "2px 8px", color: "white" }}
+                    className="scroll-btn"
+                    style={{ backgroundColor: "#1ea04c", border: "0.5px solid white", padding: "2px 8px", color: "white" }}
                     speed={200}
                 />
 
