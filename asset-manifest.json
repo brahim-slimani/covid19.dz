@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/covid19.dz/static/css/main.916b512d.chunk.css",
-    "main.js": "/covid19.dz/static/js/main.6f018ed9.chunk.js",
+    "main.css": "/covid19.dz/static/css/main.ff6b2924.chunk.css",
+    "main.js": "/covid19.dz/static/js/main.916faa00.chunk.js",
     "runtime-main.js": "/covid19.dz/static/js/runtime-main.8a8e367d.js",
     "static/css/2.3b4a80e9.chunk.css": "/covid19.dz/static/css/2.3b4a80e9.chunk.css",
     "static/js/2.043289b9.chunk.js": "/covid19.dz/static/js/2.043289b9.chunk.js",
     "index.html": "/covid19.dz/index.html",
-    "precache-manifest.22948ed1560da5a51d0bcd17b0d426eb.js": "/covid19.dz/precache-manifest.22948ed1560da5a51d0bcd17b0d426eb.js",
+    "precache-manifest.4bd780a19cdce382186329b9d7ea28c8.js": "/covid19.dz/precache-manifest.4bd780a19cdce382186329b9d7ea28c8.js",
     "service-worker.js": "/covid19.dz/service-worker.js",
     "static/js/2.043289b9.chunk.js.LICENSE.txt": "/covid19.dz/static/js/2.043289b9.chunk.js.LICENSE.txt",
     "static/media/algeria-flag.png": "/covid19.dz/static/media/algeria-flag.6bb826dc.png",
@@ -23,7 +23,7 @@
     "static/js/runtime-main.8a8e367d.js",
     "static/css/2.3b4a80e9.chunk.css",
     "static/js/2.043289b9.chunk.js",
-    "static/css/main.916b512d.chunk.css",
-    "static/js/main.6f018ed9.chunk.js"
+    "static/css/main.ff6b2924.chunk.css",
+    "static/js/main.916faa00.chunk.js"
   ]
 }
