@@ -10,6 +10,8 @@ import CovidRankDeath from "./CovidRankDeath";
 import { CustomMesauresChart } from "./CustomMeasuresChart";
 import DailyChartReport from "./DailyChartReport";
 import AdviceCard from "../component/AdviceCard";
+import ScrollTop from "react-scrolltop-button";
+
 
 class Dashboard extends React.Component {
 
@@ -162,6 +164,13 @@ class Dashboard extends React.Component {
                 </div>
 
                 <CovidRankDeath />
+
+                <ScrollTop
+                    text={<i className="fa fa-arrow-up" />}
+                    distance={90}
+                    style={{ backgroundColor: "#00ff00", border: "0.5px solid white", padding: "2px 8px", color: "white" }}
+                    speed={200}
+                />
 
             </div>
         );
