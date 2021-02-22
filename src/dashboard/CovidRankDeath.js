@@ -61,6 +61,7 @@ class CovidRankDeath extends Component {
                 {this.state.data != null ?
                     <CustomDataTable title='Ranking of countries by rate of deaths'
                                      columns={this.columnsDataTable}
+                                     row={30}
                                      data={this.dealRankingData(this.state.data)}/>
                     : <CustomProgress type='bar'/>
                 }

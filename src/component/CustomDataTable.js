@@ -30,7 +30,7 @@ function CustomDataTable (props) {
     return(
         <DataTable value={props.data} responsive
                    header={header} globalFilter={filter}
-                   paginator={true} rows={10} rowsPerPageOptions={[5,10,30,50]}
+                   paginator={true} rows={props.row} rowsPerPageOptions={[5,10,30,50]}
                    emptyMessage="No records found"
                    rowHover
                    paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink CurrentPageReport RowsPerPageDropdown">

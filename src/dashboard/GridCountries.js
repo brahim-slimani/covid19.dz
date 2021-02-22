@@ -80,8 +80,8 @@ class GridCountries extends React.Component {
                     <DataView value={this.sortedDataSet(this.state.countriesCovid)}
                               itemTemplate={this.itemTemplate}
                               paginatorPosition={'both'} paginator={true}
-                              layout={this.props.viewport == 'desktop' ? 'grid' : 'list'}
-                              rows={12}>
+                              layout={this.props.viewport === 'desktop' ? 'grid' : 'list'}
+                              rows={30}>
                     </DataView>
                 : <CustomProgress type='bar'/>}
 
