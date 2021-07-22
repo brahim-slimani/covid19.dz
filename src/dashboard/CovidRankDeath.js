@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import {DataTable} from "primereact/datatable";
 import CustomDataTable from "../component/CustomDataTable";
 import CovidService from "../service/CovidService";
 import {CustomProgress} from "../component/CustomProgress";
@@ -21,18 +20,18 @@ class CovidRankDeath extends Component {
     ]
 
     dealRankingData = (data) => {
-        let prefix = "https://corona.lmao.ninja";
-        let result = new Array();
+        let result = [];
         data.map((item) => {
             var deathReport = (item.deaths / item.cases) * 100;
             result.push(
                 {
                     rank: 0,
-                    flag : <img src={item.countryInfo.flag} height={30} style={{borderRadius: 7}}/>,
+                    flag : <img src={item.countryInfo.flag} height={30} style={{borderRadius: 7}} alt="flag"/>,
                     country: item.country,
                     deathPercent: deathReport.toFixed(2)
                 }
             );
+            return deathReport;
         });
 
         result.sort(function (a, b) {

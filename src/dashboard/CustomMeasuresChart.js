@@ -1,7 +1,7 @@
-import React, {useEffect, useState} from "react";
-import {Chart} from "primereact/chart";
-import {CustomProgress} from "../component/CustomProgress";
-import {Panel} from "primereact/panel";
+import React, { useEffect, useState } from "react";
+import { Chart } from "primereact/chart";
+import { CustomProgress } from "../component/CustomProgress";
+import { Panel } from "primereact/panel";
 import CovidService from "../service/CovidService";
 
 
@@ -37,24 +37,22 @@ function CustomMesauresChart(props) {
     useEffect(() => {
         const fetchData = async () => {
             CovidService.getHistoricalCovid(props.perimeter).then(response => {
-                let customResponse = props.perimeter == 'Algeria' ? response.data.timeline : response.data;
+                let customResponse = props.perimeter === 'Algeria' ? response.data.timeline : response.data;
                 setCases(getYAxes(customResponse.cases));
                 setDeaths(getYAxes(customResponse.deaths));
                 setRecovers(getYAxes(customResponse.recovered));
                 setDays(getXAxes(customResponse.cases));
             }).catch(error => {
-                console.log(error);
+                alert(error);
             });
         };
         fetchData();
-    }, []);
+    }, [props.perimeter]);
 
     const getXAxes = (data) => {
         // let result = Object.entries(data).map(( [k, v] ) => (k));
         let result = Object.entries(data).map(([k, v]) => {
-            if (v != 0) {
-                return k;
-            }
+            return (v !== 0) ? k : null;
         });
         result = result.filter(function (x) {
             return x !== undefined;
@@ -66,9 +64,7 @@ function CustomMesauresChart(props) {
     const getYAxes = (data) => {
         //let result = Object.entries(data).map(( [k, v] ) => ({ [k]: v }));
         let result = Object.entries(data).map(([k, v]) => {
-            if (v != 0) {
-                return v;
-            }
+            return (v !== 0) ? v : null;
         });
         result = result.filter(function (x) {
             return x !== undefined;
@@ -81,10 +77,10 @@ function CustomMesauresChart(props) {
 
     return (
         <Panel header={props.title} className="chart-content">
-            {cases?.length ? <Chart type="line" data={dataChart}/> : <CustomProgress type='spinner'/>}
+            {cases?.length ? <Chart type="line" data={dataChart} /> : <CustomProgress type='spinner' />}
         </Panel>
 
     );
 }
 
-export {CustomMesauresChart}
+export { CustomMesauresChart }

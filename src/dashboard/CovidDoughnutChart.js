@@ -1,10 +1,10 @@
-import React, {Component} from "react";
-import {Panel} from "primereact/panel";
+import React from "react";
+import { Panel } from "primereact/panel";
 import CovidService from "../service/CovidService";
-import {Chart} from "primereact/chart";
-import {CustomProgress} from "../component/CustomProgress";
+import { Chart } from "primereact/chart";
+import { CustomProgress } from "../component/CustomProgress";
 
-class CovidDoughnutChart extends React.Component{
+class CovidDoughnutChart extends React.Component {
 
     constructor(props) {
         super(props);
@@ -26,11 +26,12 @@ class CovidDoughnutChart extends React.Component{
         let axes;
         switch (this.props.type) {
             case 'global':
-                axes = ['active cases','deaths','recovered'];
+                axes = ['active cases', 'deaths', 'recovered'];
                 break;
             case 'today':
-                axes = ['new cases','deaths', 'recovered'];
+                axes = ['new cases', 'deaths', 'recovered'];
                 break;
+            default: break;
         }
         return axes;
     }
@@ -44,20 +45,21 @@ class CovidDoughnutChart extends React.Component{
             case 'today':
                 axes = [data.todayCases, data.todayDeaths, data.todayRecovered];
                 break;
+            default: break;
         }
         return axes;
     }
 
 
     componentDidMount() {
-        if(this.props.perimeter == 'world'){
+        if (this.props.perimeter === 'world') {
             CovidService.getWorldCovid().then(response => {
                 this.setState(prevState => ({
                     dataChart: {
                         ...prevState.dataChart,
                         labels: this.getXAxes(),
                         datasets: [{
-                            data:  this.getYAxes(response.data),
+                            data: this.getYAxes(response.data),
                             backgroundColor: [
                                 "#ed1d24",
                                 "#000000",
@@ -66,17 +68,17 @@ class CovidDoughnutChart extends React.Component{
                         }],
                     }
                 }));
-            }).catch(error =>{
+            }).catch(error => {
                 console.log(error);
             });
-        }else {
+        } else {
             CovidService.getCountryCovid('Algeria').then(response => {
                 this.setState(prevState => ({
                     dataChart: {
                         ...prevState.dataChart,
                         labels: this.getXAxes(),
                         datasets: [{
-                            data:  this.getYAxes(response.data),
+                            data: this.getYAxes(response.data),
                             backgroundColor: [
                                 "#ed1d24",
                                 "#000000",
@@ -85,7 +87,7 @@ class CovidDoughnutChart extends React.Component{
                         }],
                     }
                 }));
-            }).catch(error =>{
+            }).catch(error => {
                 console.log(error);
             });
         }
@@ -97,12 +99,12 @@ class CovidDoughnutChart extends React.Component{
             legend: {
                 position: 'right'
             },
-            responsive:true,
+            responsive: true,
         };
-        return(
+        return (
             <Panel header={this.props.title} className="chart-content">
                 {this.state.dataChart.labels != null ?
-                    <Chart type='doughnut' data={this.state.dataChart} options={options} /> : <CustomProgress type='spinner'/>
+                    <Chart type='doughnut' data={this.state.dataChart} options={options} /> : <CustomProgress type='spinner' />
                 }
             </Panel>
         );

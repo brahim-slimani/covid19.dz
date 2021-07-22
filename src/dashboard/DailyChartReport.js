@@ -23,7 +23,7 @@ export default function DailyChartReport(props) {
     useEffect(() => {
         const fetchData = async () => {
             CovidService.getHistoricalCovid(props.country).then(response => {
-                let customResponse = props.country == 'all' ? response.data : response.data.timeline;
+                let customResponse = props.country === 'all' ? response.data : response.data.timeline;
                 switch (props.type) {
                     case 'cases':
                         setXAxes(getDays(customResponse.cases));
@@ -37,20 +37,19 @@ export default function DailyChartReport(props) {
                         setXAxes(getDays(customResponse.recovered));
                         setYAxes(getValues(customResponse.recovered));
                         break;
+                    default: break;
                 }
 
             }).catch(error => {
-                console.log(error);
+                alert(error);
             });
         };
         fetchData();
-    }, []);
+    }, [props.country, props.type]);
 
     let getDays = (data) => {
         let result = Object.entries(data).map(([k, v]) => {
-            if (v !== 0) {
-                return k;
-            }
+            return (v !== 0) ? k : null;
         });
         result = result.filter(function (x) {
             return x !== undefined;
@@ -61,9 +60,7 @@ export default function DailyChartReport(props) {
 
     let getValues = (data) => {
         let tempResult = Object.entries(data).map(([k, v]) => {
-            if (v !== 0) {
-                return v;
-            }
+            return (v !== 0) ? v : null;
         });
         tempResult = tempResult.filter(function (x) {
             return x !== undefined;
@@ -73,8 +70,8 @@ export default function DailyChartReport(props) {
         let i = 0;
         while (i < tempResult.length) {
             if ((i - 1) > -1) {
-                tempResult[i] - tempResult[i - 1] < 0 ? result.push(0) 
-                :  result.push(tempResult[i] - tempResult[i - 1]);
+                tempResult[i] - tempResult[i - 1] < 0 ? result.push(0)
+                    : result.push(tempResult[i] - tempResult[i - 1]);
             }
             i++;
         }

@@ -5,7 +5,6 @@ import bioIcon from "../assets/img/bio-danger-yellow.png";
 import CovidService from "../service/CovidService";
 import CovidDoughnutChart from "./CovidDoughnutChart";
 import GridCountries from "./GridCountries";
-import GridProvinces from "./GridProvinces";
 import CovidRankDeath from "./CovidRankDeath";
 import { CustomMesauresChart } from "./CustomMeasuresChart";
 import DailyChartReport from "./DailyChartReport";
@@ -31,9 +30,7 @@ class Dashboard extends React.Component {
     getXAxes = (data) => {
         // let result = Object.entries(data).map(( [k, v] ) => (k));
         let result = Object.entries(data).map(([k, v]) => {
-            if (v != 0) {
-                return k;
-            }
+            return (v !== 0) ? k : null;
         });
         result = result.filter(function (x) {
             return x !== undefined;
@@ -44,9 +41,7 @@ class Dashboard extends React.Component {
     getYAxes = (data) => {
         //let result = Object.entries(data).map(( [k, v] ) => ({ [k]: v }));
         let result = Object.entries(data).map(([k, v]) => {
-            if (v != 0) {
-                return v;
-            }
+            return (v !== 0) ? v : null;
         });
         result = result.filter(function (x) {
             return x !== undefined;
@@ -87,19 +82,19 @@ class Dashboard extends React.Component {
             <div className="App">
                 {/* <CustomHeader lastUpdate={this.state.lastUpdate} /> */}
                 <div className="card-parent">
-                <AdviceCard />
-                <br />
-                <div className='card-container'>
-                    <CustomCard icon='fa fa-certificate' title='Total Cases' count={this.state.countCases} todayReport={this.state.todayCases} subtitle='new cases' color="red" />
-                    &nbsp;
-                    <CustomCard img={deathIcon} title='Total Deaths' count={this.state.countDeaths} todayReport={this.state.todayDeaths} subtitle='new deaths' color="white" />
-                    &nbsp;
-                    <CustomCard icon='fa fa-heartbeat' title='Total Recovers' count={this.state.countRecovered} color="#00ff00" />
-                    &nbsp;
-                    <CustomCard img={bioIcon} title='Active Cases' count={this.state.countActive} color="#ffde00" />
+                    <AdviceCard />
+                    <br />
+                    <div className='card-container'>
+                        <CustomCard icon='fa fa-certificate' title='Total Cases' count={this.state.countCases} todayReport={this.state.todayCases} subtitle='new cases' color="red" />
+                        &nbsp;
+                        <CustomCard img={deathIcon} title='Total Deaths' count={this.state.countDeaths} todayReport={this.state.todayDeaths} subtitle='new deaths' color="white" />
+                        &nbsp;
+                        <CustomCard icon='fa fa-heartbeat' title='Total Recovers' count={this.state.countRecovered} color="#00ff00" />
+                        &nbsp;
+                        <CustomCard img={bioIcon} title='Active Cases' count={this.state.countActive} color="#ffde00" />
+                    </div>
                 </div>
-                </div>
-               
+
                 <br />
 
                 <div className="chart-container">
@@ -170,7 +165,6 @@ class Dashboard extends React.Component {
                     distance={90}
                     className="scroll-btn"
                     style={{ backgroundColor: "#1ea04c", border: "0.5px solid white", padding: "2px 8px", color: "white" }}
-                    speed={200}
                 />
 
             </div>

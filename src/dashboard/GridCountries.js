@@ -1,14 +1,11 @@
-import React, {Component} from "react";
-import {Panel} from "primereact/panel";
+import React from "react";
+import { Panel } from "primereact/panel";
 import CovidService from "../service/CovidService";
 import deathIcon from "../assets/img/death-icon.png";
 import worldIcon from "../assets/img/world-icon.png";
-import {DataView} from "primereact/dataview";
-import {InputText} from "primereact/inputtext";
-import {Button} from "primereact/button";
-import {ProgressBar} from "primereact/progressbar";
-import {CustomInputFilter} from "../component/CustomInputFilter";
-import {CustomProgress} from "../component/CustomProgress";
+import { DataView } from "primereact/dataview";
+import { CustomInputFilter } from "../component/CustomInputFilter";
+import { CustomProgress } from "../component/CustomProgress";
 
 class GridCountries extends React.Component {
 
@@ -24,7 +21,7 @@ class GridCountries extends React.Component {
 
     sortedDataSet = (data) => {
         let result = data;
-        result.sort(function (a,b) {
+        result.sort(function (a, b) {
             return (b.cases - a.cases);
         });
         return result;
@@ -32,7 +29,7 @@ class GridCountries extends React.Component {
 
     componentDidMount() {
         CovidService.getCountriesCovid().then(response => {
-            this.setState({countriesCovid: response.data, countriesFilter: response.data});
+            this.setState({ countriesCovid: response.data, countriesFilter: response.data });
             //this.sortDataSet(this.state.countriesCovid);
         }).catch(error => {
             console.log(error);
@@ -41,19 +38,18 @@ class GridCountries extends React.Component {
 
 
     itemTemplate = (item) => {
-        let prefix = "https://corona.lmao.ninja";
         return (
             <div className="p-col-3 card-country">
                 {item != null &&
-                <Panel header={item.country} style={{textAlign: 'center'}}>
-                    {item.country == 'World' ? <img src={worldIcon} height={30}/> :
-                        // <img src={prefix+item.countryInfo.flag.substr(18, item.countryInfo.flag.size)} height={30}/>
-                        <img src={item.countryInfo.flag} height={30}/>}
-                    <br/>
-                    <div><i className="fa fa-certificate"/>&nbsp;Confirmed Cases : {item.cases}</div>
-                    <div><i className="fa fa-heartbeat"/>&nbsp;Recovered : {item.recovered}</div>
-                    <div><img src={deathIcon} height={15}/>&nbsp;Deaths : {item.deaths}</div>
-                </Panel>
+                    <Panel header={item.country} style={{ textAlign: 'center' }}>
+                        {item.country === 'World' ? <img src={worldIcon} height={30} alt="img" /> :
+                            // <img src={prefix+item.countryInfo.flag.substr(18, item.countryInfo.flag.size)} height={30}/>
+                            <img src={item.countryInfo.flag} height={30} alt="img" />}
+                        <br />
+                        <div><i className="fa fa-certificate" />&nbsp;Confirmed Cases : {item.cases}</div>
+                        <div><i className="fa fa-heartbeat" />&nbsp;Recovered : {item.recovered}</div>
+                        <div><img src={deathIcon} height={15} alt="img" />&nbsp;Deaths : {item.deaths}</div>
+                    </Panel>
                 }
             </div>
         );
@@ -64,28 +60,28 @@ class GridCountries extends React.Component {
         let countries = this.state.countriesFilter;
         let searchedCountries = countries.filter(country =>
             country.country.toLowerCase().includes(event.target.value.toLowerCase()));
-        this.setState({countriesCovid: searchedCountries});
+        this.setState({ countriesCovid: searchedCountries });
     }
 
 
     render() {
         return (
             <div className="countries-grid-content">
-                <br/>
+                <br />
                 <div><p className="title-covid-world">{this.props.title}</p></div>
 
-                <CustomInputFilter hint='Search country' onChange={this.handleSearch}/>
+                <CustomInputFilter hint='Search country' onChange={this.handleSearch} />
 
                 {this.state.countriesCovid != null ?
                     <DataView value={this.sortedDataSet(this.state.countriesCovid)}
-                              itemTemplate={this.itemTemplate}
-                              paginatorPosition={'both'} paginator={true}
-                              layout={this.props.viewport === 'desktop' ? 'grid' : 'list'}
-                              rows={30}>
+                        itemTemplate={this.itemTemplate}
+                        paginatorPosition={'both'} paginator={true}
+                        layout={this.props.viewport === 'desktop' ? 'grid' : 'list'}
+                        rows={30}>
                     </DataView>
-                : <CustomProgress type='bar'/>}
+                    : <CustomProgress type='bar' />}
 
-                <br/>
+                <br />
             </div>
         );
     }
