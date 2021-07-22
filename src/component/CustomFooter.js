@@ -8,7 +8,7 @@ function CustomFooter(props) {
                 <div className="row content-footer">
                     <div className="col-md-6 mt-md-0 mt-3">
                         <h5><a href="#">COVID19.DZ</a></h5>
-                        <p>Situation Dashboard for the Corona Virus Disease in Algeria & around the world.</p>
+                        <p>Situation Dashboard of the Covid19 in Algeria & around the world.</p>
                     </div>
                     <hr className="clearfix w-100 d-md-none pb-3" />
                     <div className="col-md-3 mb-md-0 mb-3">
