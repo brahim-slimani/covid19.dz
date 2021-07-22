@@ -28,8 +28,8 @@ function CustomMesauresChart(props) {
         }, {
             label: 'Recovers',
             data: recovers,
-            backgroundColor: "#1ea04c",
-            borderColor: "#1ea04c",
+            backgroundColor: "#00ff00",
+            borderColor: "#00ff00",
             fill: false,
         }]
     }
@@ -59,6 +59,7 @@ function CustomMesauresChart(props) {
         result = result.filter(function (x) {
             return x !== undefined;
         });
+        result.shift();
         return result;
     }
 

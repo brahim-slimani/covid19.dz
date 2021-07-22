@@ -1,8 +1,8 @@
 import React, {Component} from "react";
 import {Panel} from "primereact/panel";
 import CovidService from "../service/CovidService";
-import deathIcon from "../style/img/death-icon.png";
-import worldIcon from "../style/img/world-icon.png";
+import deathIcon from "../assets/img/death-icon.png";
+import worldIcon from "../assets/img/world-icon.png";
 import {DataView} from "primereact/dataview";
 import {InputText} from "primereact/inputtext";
 import {Button} from "primereact/button";
@@ -41,11 +41,13 @@ class GridCountries extends React.Component {
 
 
     itemTemplate = (item) => {
+        let prefix = "https://corona.lmao.ninja";
         return (
             <div className="p-col-3 card-country">
                 {item != null &&
                 <Panel header={item.country} style={{textAlign: 'center'}}>
                     {item.country == 'World' ? <img src={worldIcon} height={30}/> :
+                        // <img src={prefix+item.countryInfo.flag.substr(18, item.countryInfo.flag.size)} height={30}/>
                         <img src={item.countryInfo.flag} height={30}/>}
                     <br/>
                     <div><i className="fa fa-certificate"/>&nbsp;Confirmed Cases : {item.cases}</div>
@@ -70,8 +72,7 @@ class GridCountries extends React.Component {
         return (
             <div className="countries-grid-content">
                 <br/>
-                <div><strong className="title-covid-world">{this.props.title}</strong></div>
-                <p/>
+                <div><p className="title-covid-world">{this.props.title}</p></div>
 
                 <CustomInputFilter hint='Search country' onChange={this.handleSearch}/>
 
@@ -79,8 +80,8 @@ class GridCountries extends React.Component {
                     <DataView value={this.sortedDataSet(this.state.countriesCovid)}
                               itemTemplate={this.itemTemplate}
                               paginatorPosition={'both'} paginator={true}
-                              layout={this.props.viewport == 'desktop' ? 'grid' : 'list'}
-                              rows={12}>
+                              layout={this.props.viewport === 'desktop' ? 'grid' : 'list'}
+                              rows={30}>
                     </DataView>
                 : <CustomProgress type='bar'/>}
 

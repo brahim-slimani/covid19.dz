@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {Panel} from "primereact/panel";
 import CovidService from "../service/CovidService";
-import deathIcon from "../style/img/death-icon.png";
+import deathIcon from "../assets/img/death-icon.png";
 import {DataView} from "primereact/dataview";
 import {CustomInputFilter} from "../component/CustomInputFilter";
 import {CustomProgress} from "../component/CustomProgress";
@@ -70,8 +70,7 @@ class GridProvinces extends React.Component {
         return (
             <div className="countries-grid-content">
                 <br/>
-                <div><strong className="title-covid-world">{this.props.title}</strong></div>
-                <p/>
+                <div><p className="title-covid-world">{this.props.title}</p></div>
 
                 <CustomInputFilter hint='Search province' onChange={this.handleSearch}/>
 

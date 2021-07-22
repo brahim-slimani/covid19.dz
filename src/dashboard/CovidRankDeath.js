@@ -21,6 +21,7 @@ class CovidRankDeath extends Component {
     ]
 
     dealRankingData = (data) => {
+        let prefix = "https://corona.lmao.ninja";
         let result = new Array();
         data.map((item) => {
             var deathReport = (item.deaths / item.cases) * 100;
@@ -60,6 +61,7 @@ class CovidRankDeath extends Component {
                 {this.state.data != null ?
                     <CustomDataTable title='Ranking of countries by rate of deaths'
                                      columns={this.columnsDataTable}
+                                     row={30}
                                      data={this.dealRankingData(this.state.data)}/>
                     : <CustomProgress type='bar'/>
                 }

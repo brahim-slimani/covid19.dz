@@ -17,6 +17,7 @@
     "react-floating-button": "^1.1.1",
     "react-font-awesome": "^1.0.3",
     "react-scripts": "3.4.1",
+    "react-scrolltop-button": "^0.1.6",
     "react-transition-group": "^4.3.0"
   },
   "scripts": {

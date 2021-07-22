@@ -1,18 +1,19 @@
 import React from "react";
-import {CustomCard} from "../component/CustomCard";
-import CustomHeader from "../component/CustomHeader";
-import deathIcon from "../style/img/death-icon.png";
-import bioIcon from "../style/img/bio-danger-icon.png";
+import { CustomCard } from "../component/CustomCard";
+import deathIcon from "../assets/img/death-icon.png";
+import bioIcon from "../assets/img/bio-danger-yellow.png";
 import CovidService from "../service/CovidService";
-import CovidBarChart from "./CovidBarChart";
 import CovidDoughnutChart from "./CovidDoughnutChart";
 import GridCountries from "./GridCountries";
 import GridProvinces from "./GridProvinces";
 import CovidRankDeath from "./CovidRankDeath";
-import {CustomMesauresChart} from "./CustomMeasuresChart";
+import { CustomMesauresChart } from "./CustomMeasuresChart";
 import DailyChartReport from "./DailyChartReport";
+import AdviceCard from "../component/AdviceCard";
+import ScrollTop from "react-scrolltop-button";
 
-class Dashboard extends React.Component{
+
+class Dashboard extends React.Component {
 
     constructor(props) {
         super(props);
@@ -29,8 +30,8 @@ class Dashboard extends React.Component{
 
     getXAxes = (data) => {
         // let result = Object.entries(data).map(( [k, v] ) => (k));
-        let result = Object.entries(data).map(( [k, v] ) => {
-            if(v != 0){
+        let result = Object.entries(data).map(([k, v]) => {
+            if (v != 0) {
                 return k;
             }
         });
@@ -42,8 +43,8 @@ class Dashboard extends React.Component{
 
     getYAxes = (data) => {
         //let result = Object.entries(data).map(( [k, v] ) => ({ [k]: v }));
-        let result = Object.entries(data).map(( [k, v] ) => {
-            if(v != 0){
+        let result = Object.entries(data).map(([k, v]) => {
+            if (v != 0) {
                 return v;
             }
         });
@@ -57,10 +58,10 @@ class Dashboard extends React.Component{
     componentDidMount() {
         CovidService.getCountryCovid('Algeria').then(response => {
             this.setState({
-                countCases:response.data.cases,
-                countDeaths:response.data.deaths,
-                countRecovered:response.data.recovered,
-                countActive:response.data.active,
+                countCases: response.data.cases,
+                countDeaths: response.data.deaths,
+                countRecovered: response.data.recovered,
+                countActive: response.data.active,
                 todayCases: response.data.todayCases,
                 todayDeaths: response.data.todayDeaths,
                 lastUpdate: 'last update : ' + this.timespanToDatetime(response.data.updated)
@@ -73,46 +74,58 @@ class Dashboard extends React.Component{
     }
 
     timespanToDatetime = (doubleDate) => {
-        if(doubleDate==="") return "";
-        if(doubleDate===null) return "";
-        if(doubleDate===undefined) return "";
+        if (doubleDate === "") return "";
+        if (doubleDate === null) return "";
+        if (doubleDate === undefined) return "";
         const current_datetime = new Date(doubleDate);
-        return current_datetime.getDate()+"-"+(current_datetime.getMonth() + 1)+"-"+current_datetime.getFullYear()
+        return current_datetime.getDate() + "-" + (current_datetime.getMonth() + 1) + "-" + current_datetime.getFullYear()
     }
 
 
     render() {
-        return(
+        return (
             <div className="App">
-                <CustomHeader lastUpdate={this.state.lastUpdate}/>
-                <br/>
+                {/* <CustomHeader lastUpdate={this.state.lastUpdate} /> */}
+                <div className="card-parent">
+                <AdviceCard />
+                <br />
                 <div className='card-container'>
-                    <CustomCard icon='fa fa-certificate' title='Total Cases' count={this.state.countCases} todayReport={this.state.todayCases} subtitle='new cases' />
+                    <CustomCard icon='fa fa-certificate' title='Total Cases' count={this.state.countCases} todayReport={this.state.todayCases} subtitle='new cases' color="red" />
                     &nbsp;
-                    <CustomCard img={deathIcon} title='Total Deaths' count={this.state.countDeaths} todayReport={this.state.todayDeaths} subtitle='new deaths' />
+                    <CustomCard img={deathIcon} title='Total Deaths' count={this.state.countDeaths} todayReport={this.state.todayDeaths} subtitle='new deaths' color="white" />
                     &nbsp;
-                    <CustomCard icon='fa fa-heartbeat' title='Total Recovers' count={this.state.countRecovered}/>
+                    <CustomCard icon='fa fa-heartbeat' title='Total Recovers' count={this.state.countRecovered} color="#00ff00" />
                     &nbsp;
-                    <CustomCard img={bioIcon} title='Active Cases' count={this.state.countActive}/>
+                    <CustomCard img={bioIcon} title='Active Cases' count={this.state.countActive} color="#ffde00" />
                 </div>
-                <br/>
+                </div>
+               
+                <br />
 
                 <div className="chart-container">
+                    <DailyChartReport title="Daily cases" type="cases" label="cases" country="algeria" color="red" />
+                    &nbsp;
+                    <DailyChartReport title="Daily deaths" type="deaths" label="deaths" country="algeria" color="black" />
+                    &nbsp;
+                    <DailyChartReport title="Daily recovers" type="recovered" label="recovers" country="algeria" color="#00ff00" />
+                </div>
+
+                {/* <div className="chart-container">
                     <CovidBarChart title='Evolution Cases' type='cases' perimeter='Algeria'/>
                     &nbsp;
                     <CovidBarChart title='Evolution Deaths' type='death' perimeter='Algeria'/>
                     &nbsp;
                     <CovidBarChart title='Evolution Recovered' type='recovered' perimeter='Algeria'/>
-                </div>
+                </div> */}
 
                 <div className="chart-container">
-                    <CustomMesauresChart title= 'Comparative Report' perimeter='Algeria'/>
+                    <CustomMesauresChart title='Cumulations' perimeter='Algeria' />
                     &nbsp;
-                    <CovidDoughnutChart title='Today Situation' type='today' perimeter='Algeria'/>
+                    <CovidDoughnutChart title='Global Situation' type='global' perimeter='Algeria' />
                     &nbsp;
-                    <CovidDoughnutChart title='Global Situation' type='global' perimeter='Algeria'/>
-                    &nbsp;
+                    {this.state.todayCases !== 0 ? <CovidDoughnutChart title='Today Situation' type='today' perimeter='Algeria' /> : <div className="chart-content" />}
                 </div>
+
                 {/*<div className="chart-container">
                     <WilayaChart title='Cases % Wilaya' type='confirmed'/>
                     &nbsp;
@@ -121,27 +134,44 @@ class Dashboard extends React.Component{
                     <div className="chart-content" />
                 </div>*/}
 
-                <GridProvinces title="Situation in Provinces" viewport={window.innerWidth > 500 ? "desktop" : "mobile"} />
+                {/* <GridProvinces title="Situation in Provinces" viewport={window.innerWidth > 500 ? "desktop" : "mobile"} /> */}
 
-                <GridCountries title="COVID-19 around the world" viewport={window.innerWidth > 500 ? "desktop" : "mobile"}/>
+                <GridCountries title="COVID-19 around the world" viewport={window.innerWidth > 500 ? "desktop" : "mobile"} />
 
-                <div className="chart-container">
+                {/* <div className="chart-container">
                     <CovidBarChart title='Evolution Cases' type='cases' perimeter='world'/>
                     &nbsp;
                     <CovidBarChart title='Evolution Deaths' type='death' perimeter='world'/>
                     &nbsp;
                     <CovidBarChart title='Evolution Recovered' type='recovered' perimeter='world'/>
-                </div>
+                </div> */}
 
                 <div className="chart-container">
-                    <CustomMesauresChart title= 'Comparative Report' perimeter='all'/>
+                    <DailyChartReport title="Daily cases" type="cases" label="cases" country="all" color="red" />
                     &nbsp;
-                    <CovidDoughnutChart title='Today Situation' type='today' perimeter='world'/>
+                    <DailyChartReport title="Daily deaths" type="deaths" label="deaths" country="all" color="black" />
                     &nbsp;
-                    <CovidDoughnutChart title='Global Situation' type='global' perimeter='world'/>
+                    <DailyChartReport title="Daily recovers" type="recovered" label="recovers" country="all" color="#00ff00" />
+                </div>
+
+
+                <div className="chart-container">
+                    <CustomMesauresChart title='Cumulations' perimeter='all' />
+                    &nbsp;
+                    <CovidDoughnutChart title='Global Situation' type='global' perimeter='world' />
+                    &nbsp;
+                    <CovidDoughnutChart title='Today Situation' type='today' perimeter='world' />
                 </div>
 
                 <CovidRankDeath />
+
+                <ScrollTop
+                    text={<i className="fa fa-arrow-up" />}
+                    distance={90}
+                    className="scroll-btn"
+                    style={{ backgroundColor: "#1ea04c", border: "0.5px solid white", padding: "2px 8px", color: "white" }}
+                    speed={200}
+                />
 
             </div>
         );

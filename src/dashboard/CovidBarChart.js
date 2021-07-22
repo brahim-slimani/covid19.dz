@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React from "react";
 import {Panel} from "primereact/panel";
 import CovidService from "../service/CovidService";
 import {Chart} from "primereact/chart";
@@ -25,7 +25,7 @@ class CovidBarChart extends React.Component{
     getXAxes = (data) => {
         // let result = Object.entries(data).map(( [k, v] ) => (k));
         let result = Object.entries(data).map(( [k, v] ) => {
-          if(v != 0){
+          if(v !== 0){
               return k;
           }
         });
@@ -38,7 +38,7 @@ class CovidBarChart extends React.Component{
     getYAxes = (data) => {
         //let result = Object.entries(data).map(( [k, v] ) => ({ [k]: v }));
         let result = Object.entries(data).map(( [k, v] ) => {
-            if(v != 0){
+            if(v !== 0){
                 return v;
             }
         });
@@ -46,13 +46,16 @@ class CovidBarChart extends React.Component{
             return x !== undefined;
         });
 
+        //temporary static solution for ecart recovered timelines
+        if(this.props.type == 'recovered' && this.props.perimeter == 'Algeria'){
+        }
         return result;
     }
 
 
     componentDidMount() {
-        var prefixUrl = this.props.perimeter == 'world' ? 'all' : 'Algeria';
-        CovidService.getHistoricalCovid(prefixUrl).then(response => {
+        var sufixUrl = this.props.perimeter == 'world' ? 'all' : 'Algeria';
+        CovidService.getHistoricalCovid(sufixUrl).then(response => {
             let customResponse = this.props.perimeter == 'world' ? response.data : response.data.timeline;
             switch (this.props.type) {
                 case 'cases' :
@@ -63,6 +66,7 @@ class CovidBarChart extends React.Component{
                             datasets: [{
                                 label: 'Cumulative cases',
                                 backgroundColor: '#ed1d24',
+                                fill: false,
                                 data:  this.getYAxes(customResponse.cases)
                             }],
                         }
@@ -76,6 +80,7 @@ class CovidBarChart extends React.Component{
                             datasets: [{
                                 label: 'Cumulative Deaths',
                                 backgroundColor: '#000000',
+                                fill: false,
                                 data:  this.getYAxes(customResponse.deaths)
                             }],
                         }
@@ -95,6 +100,7 @@ class CovidBarChart extends React.Component{
                         }
                     }));
                     break;
+                    default: break;
             }
         }).catch(error =>{
             console.log(error);

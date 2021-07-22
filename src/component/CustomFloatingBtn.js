@@ -1,6 +1,6 @@
 import React from "react";
 import FloatingButton, {Item} from "react-floating-button";
-import deathIcon from "../style/img/death-icon.png";
+import deathIcon from "../assets/img/death-icon.png";
 
 export const CustomFloatingBtn = (props) => {
     return(
