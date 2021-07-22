@@ -10,7 +10,7 @@ jobs:
       - checkout
       - run: npm cache clean --force
       - run: npm install
-      - run: npm run build
+      - run: CI=false npm run build
       - run:
           name: git conf
           command: |
