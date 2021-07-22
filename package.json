@@ -1,6 +1,6 @@
 {
   "name": "dashboard-covid19.dz",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "private": true,
   "homepage": "https://slimani-ibrahim.github.io/covid19.dz",
   "dependencies": {
@@ -24,7 +24,6 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
