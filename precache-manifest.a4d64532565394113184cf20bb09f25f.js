@@ -1,35 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3d556f1858061549c8c0baa7e35807cf",
+    "revision": "0e74b81ba163d9fc2ac7973c2c647512",
     "url": "/covid19.dz/index.html"
   },
   {
-    "revision": "26d5be4e7eccca409f42",
+    "revision": "37fd5541ea79f4264065",
     "url": "/covid19.dz/static/css/2.3b4a80e9.chunk.css"
   },
   {
-    "revision": "33f3e0e37ff3255d7212",
+    "revision": "c436ec292857b00af37e",
     "url": "/covid19.dz/static/css/main.c8ee261c.chunk.css"
   },
   {
-    "revision": "26d5be4e7eccca409f42",
-    "url": "/covid19.dz/static/js/2.043289b9.chunk.js"
+    "revision": "37fd5541ea79f4264065",
+    "url": "/covid19.dz/static/js/2.fc4dbf1e.chunk.js"
   },
   {
     "revision": "ba903c53eb54d8aeab56421ebd2fe389",
-    "url": "/covid19.dz/static/js/2.043289b9.chunk.js.LICENSE.txt"
+    "url": "/covid19.dz/static/js/2.fc4dbf1e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "33f3e0e37ff3255d7212",
-    "url": "/covid19.dz/static/js/main.4b59e8ed.chunk.js"
+    "revision": "c436ec292857b00af37e",
+    "url": "/covid19.dz/static/js/main.894033f9.chunk.js"
   },
   {
     "revision": "02e4fd68c91cbb29440d",
     "url": "/covid19.dz/static/js/runtime-main.8a8e367d.js"
-  },
-  {
-    "revision": "6bb826dc1e23ffee3c4d0e4ff821b22a",
-    "url": "/covid19.dz/static/media/algeria-flag.6bb826dc.png"
   },
   {
     "revision": "33985a5d33a0f2492628168a96ce023e",
