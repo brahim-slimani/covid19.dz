@@ -49,7 +49,7 @@ export default function DailyChartReport(props) {
 
     let getDays = (data) => {
         let result = Object.entries(data).map(([k, v]) => {
-            return (v !== 0) ? k : null;
+            return k;
         });
         result = result.filter(function (x) {
             return x !== undefined;
@@ -60,7 +60,7 @@ export default function DailyChartReport(props) {
 
     let getValues = (data) => {
         let tempResult = Object.entries(data).map(([k, v]) => {
-            return (v !== 0) ? v : null;
+            return v;
         });
         tempResult = tempResult.filter(function (x) {
             return x !== undefined;
@@ -75,7 +75,6 @@ export default function DailyChartReport(props) {
             }
             i++;
         }
-        console.info(result);
         return result;
 
     }

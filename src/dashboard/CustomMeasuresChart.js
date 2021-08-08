@@ -52,7 +52,7 @@ function CustomMesauresChart(props) {
     const getXAxes = (data) => {
         // let result = Object.entries(data).map(( [k, v] ) => (k));
         let result = Object.entries(data).map(([k, v]) => {
-            return (v !== 0) ? k : null;
+            return k;
         });
         result = result.filter(function (x) {
             return x !== undefined;
@@ -64,7 +64,7 @@ function CustomMesauresChart(props) {
     const getYAxes = (data) => {
         //let result = Object.entries(data).map(( [k, v] ) => ({ [k]: v }));
         let result = Object.entries(data).map(([k, v]) => {
-            return (v !== 0) ? v : null;
+            return v;
         });
         result = result.filter(function (x) {
             return x !== undefined;
