@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/covid19.dz/static/css/main.c8ee261c.chunk.css",
-    "main.js": "/covid19.dz/static/js/main.894033f9.chunk.js",
+    "main.js": "/covid19.dz/static/js/main.8eff3c7e.chunk.js",
     "runtime-main.js": "/covid19.dz/static/js/runtime-main.8a8e367d.js",
     "static/css/2.3b4a80e9.chunk.css": "/covid19.dz/static/css/2.3b4a80e9.chunk.css",
     "static/js/2.fc4dbf1e.chunk.js": "/covid19.dz/static/js/2.fc4dbf1e.chunk.js",
     "index.html": "/covid19.dz/index.html",
-    "precache-manifest.a4d64532565394113184cf20bb09f25f.js": "/covid19.dz/precache-manifest.a4d64532565394113184cf20bb09f25f.js",
+    "precache-manifest.604a2d0e2fd4bf428da8675459ce24b0.js": "/covid19.dz/precache-manifest.604a2d0e2fd4bf428da8675459ce24b0.js",
     "service-worker.js": "/covid19.dz/service-worker.js",
     "static/js/2.fc4dbf1e.chunk.js.LICENSE.txt": "/covid19.dz/static/js/2.fc4dbf1e.chunk.js.LICENSE.txt",
     "static/media/bio-danger-yellow.png": "/covid19.dz/static/media/bio-danger-yellow.33985a5d.png",
@@ -23,6 +23,6 @@
     "static/css/2.3b4a80e9.chunk.css",
     "static/js/2.fc4dbf1e.chunk.js",
     "static/css/main.c8ee261c.chunk.css",
-    "static/js/main.894033f9.chunk.js"
+    "static/js/main.8eff3c7e.chunk.js"
   ]
 }
