@@ -6,7 +6,7 @@ import CovidService from "../service/CovidService";
 import CovidDoughnutChart from "./CovidDoughnutChart";
 import GridCountries from "./GridCountries";
 import CovidRankDeath from "./CovidRankDeath";
-import { CustomMesauresChart } from "./CustomMeasuresChart";
+import { CustomAnalyticChart } from "./CustomAnalyticChart";
 import DailyChartReport from "./DailyChartReport";
 import AdviceCard from "../component/AdviceCard";
 import ScrollTop from "react-scrolltop-button";
@@ -114,7 +114,7 @@ class Dashboard extends React.Component {
                 </div> */}
 
                 <div className="chart-container">
-                    <CustomMesauresChart title='Cumulations' perimeter='Algeria' />
+                    <CustomAnalyticChart title='Cumulations' perimeter='Algeria' />
                     &nbsp;
                     <CovidDoughnutChart title='Global Situation' type='global' perimeter='Algeria' />
                     &nbsp;
@@ -151,7 +151,7 @@ class Dashboard extends React.Component {
 
 
                 <div className="chart-container">
-                    <CustomMesauresChart title='Cumulations' perimeter='all' />
+                    <CustomAnalyticChart title='Cumulations' perimeter='all' />
                     &nbsp;
                     <CovidDoughnutChart title='Global Situation' type='global' perimeter='world' />
                     &nbsp;

@@ -5,7 +5,7 @@ import { Panel } from "primereact/panel";
 import CovidService from "../service/CovidService";
 
 
-function CustomMesauresChart(props) {
+function CustomAnalyticChart(props) {
     const [cases, setCases] = useState(null);
     const [deaths, setDeaths] = useState(null);
     const [recovers, setRecovers] = useState(null);
@@ -34,7 +34,46 @@ function CustomMesauresChart(props) {
         }]
     }
 
+
     useEffect(() => {
+        //GET THE PIC VALUE FROM THE YAXES SET
+        const getYAxesPicValue = (data) => {
+            let pic;
+            let temp = Object.entries(data).map(([k, v]) => {
+                return v;
+            });
+            temp.forEach((item) => {
+                if (item !== 0) {
+                    pic = item;
+                }
+            });
+            return pic;
+        }
+        
+        const getYAxes = (data) => {
+            //let result = Object.entries(data).map(( [k, v] ) => ({ [k]: v }));
+            let result = Object.entries(data).map(([k, v]) => {
+                return v !== 0 ? v : getYAxesPicValue(data);
+            });
+            result = result.filter(function (x) {
+                return x !== undefined;
+            });
+            return result;
+        }
+
+        const getXAxes = (data) => {
+            // let result = Object.entries(data).map(( [k, v] ) => (k));
+            let result = Object.entries(data).map(([k, v]) => {
+                return k;
+            });
+            result = result.filter(function (x) {
+                return x !== undefined;
+            });
+            result.shift();
+            return result;
+        }
+
+
         const fetchData = async () => {
             CovidService.getHistoricalCovid(props.perimeter).then(response => {
                 let customResponse = props.perimeter === 'Algeria' ? response.data.timeline : response.data;
@@ -49,32 +88,6 @@ function CustomMesauresChart(props) {
         fetchData();
     }, [props.perimeter]);
 
-    const getXAxes = (data) => {
-        // let result = Object.entries(data).map(( [k, v] ) => (k));
-        let result = Object.entries(data).map(([k, v]) => {
-            return k;
-        });
-        result = result.filter(function (x) {
-            return x !== undefined;
-        });
-        result.shift();
-        return result;
-    }
-
-    const getYAxes = (data) => {
-        //let result = Object.entries(data).map(( [k, v] ) => ({ [k]: v }));
-        let result = Object.entries(data).map(([k, v]) => {
-            return v;
-        });
-        result = result.filter(function (x) {
-            return x !== undefined;
-        });
-
-        return result;
-    }
-
-
-
     return (
         <Panel header={props.title} className="chart-content">
             {cases?.length ? <Chart type="line" data={dataChart} /> : <CustomProgress type='spinner' />}
@@ -83,4 +96,4 @@ function CustomMesauresChart(props) {
     );
 }
 
-export { CustomMesauresChart }
+export { CustomAnalyticChart }
