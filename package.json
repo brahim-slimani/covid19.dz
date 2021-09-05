@@ -9,6 +9,8 @@
     "chart.js": "^2.9.3",
     "classnames": "^2.2.6",
     "font-awesome": "^4.7.0",
+    "jest": "^24.9.0",
+    "jest-cli": "^24.9.0",
     "primeflex": "^1.0.0",
     "primeicons": "^2.0.0",
     "primereact": "^3.4.0",
@@ -23,7 +25,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
     "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },

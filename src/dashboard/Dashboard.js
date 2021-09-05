@@ -164,7 +164,7 @@ class Dashboard extends React.Component {
                     text={<i className="fa fa-arrow-up" />}
                     distance={90}
                     className="scroll-btn"
-                    style={{ backgroundColor: "#1ea04c", border: "0.5px solid white", padding: "2px 8px", color: "white" }}
+                    style={{ backgroundColor: "#1ea04c", borderRadius: "0px", border: "0px solid #1ea04c", padding: "2px 8px", color: "white" }}
                 />
 
             </div>
