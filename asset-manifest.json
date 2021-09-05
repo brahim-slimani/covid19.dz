@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/covid19.dz/static/css/main.c8ee261c.chunk.css",
-    "main.js": "/covid19.dz/static/js/main.f9c2bc70.chunk.js",
+    "main.js": "/covid19.dz/static/js/main.211f705b.chunk.js",
     "runtime-main.js": "/covid19.dz/static/js/runtime-main.8a8e367d.js",
     "static/css/2.3b4a80e9.chunk.css": "/covid19.dz/static/css/2.3b4a80e9.chunk.css",
     "static/js/2.fc4dbf1e.chunk.js": "/covid19.dz/static/js/2.fc4dbf1e.chunk.js",
     "index.html": "/covid19.dz/index.html",
-    "precache-manifest.0c6d3fbee31afcad70f657cbce5503a5.js": "/covid19.dz/precache-manifest.0c6d3fbee31afcad70f657cbce5503a5.js",
+    "precache-manifest.60fd46e2ffc688c6aedd2a80b4285959.js": "/covid19.dz/precache-manifest.60fd46e2ffc688c6aedd2a80b4285959.js",
     "service-worker.js": "/covid19.dz/service-worker.js",
     "static/js/2.fc4dbf1e.chunk.js.LICENSE.txt": "/covid19.dz/static/js/2.fc4dbf1e.chunk.js.LICENSE.txt",
     "static/media/bio-danger-yellow.png": "/covid19.dz/static/media/bio-danger-yellow.33985a5d.png",
@@ -23,6 +23,6 @@
     "static/css/2.3b4a80e9.chunk.css",
     "static/js/2.fc4dbf1e.chunk.js",
     "static/css/main.c8ee261c.chunk.css",
-    "static/js/main.f9c2bc70.chunk.js"
+    "static/js/main.211f705b.chunk.js"
   ]
 }
