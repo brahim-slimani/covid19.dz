@@ -12,7 +12,7 @@
     "jest": "^24.9.0",
     "jest-cli": "^24.9.0",
     "primeflex": "^1.0.0",
-    "primeicons": "^2.0.0",
+    "primeicons": "^4.1.0",
     "primereact": "^3.4.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",

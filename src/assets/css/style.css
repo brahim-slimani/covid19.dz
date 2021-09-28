@@ -48,7 +48,7 @@
 }
 
 .mobile-title {
-    display:  none;
+    display: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -61,6 +61,7 @@
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
@@ -110,7 +111,7 @@ body {
 .advice-card .hashtag {
     margin-bottom: 10px;
     background-color: red;
-} 
+}
 
 .advice-content .advice-avatar i {
     font-size: 16px;
@@ -126,36 +127,46 @@ body {
     opacity: 0.7;
     cursor: pointer;
     margin-right: 5px;
-  }
-  .close-btn:hover {
+}
+
+.close-btn:hover {
     opacity: 1;
     font-weight: 700;
-    
-  }
-  
-  .fade-out {
-    position: relative; 
+
+}
+
+.fade-out {
+    position: relative;
     animation: fadeOut ease 2s;
-  }
-  @keyframes fadeOut {
-    from {top:0px; opacity: 0;}
-    to {top:-200px; opacity: 1;}
-  }
-  
+}
+
+@keyframes fadeOut {
+    from {
+        top: 0px;
+        opacity: 0;
+    }
+
+    to {
+        top: -200px;
+        opacity: 1;
+    }
+}
+
 
 /*** dashboard card ***/
 
 .card-parent {
     margin-top: 50px;
     width: 100%;
-    text-align: -webkit-center;;
+    text-align: -webkit-center;
+    ;
 }
 
-.card-dashboard{
-  background-color: #191919;
-  padding: 20px;
-  border-radius: 0px;
-  color: white;
+.card-dashboard {
+    background-color: #191919;
+    padding: 20px;
+    border-radius: 0px;
+    color: white;
 }
 
 .subcard-dashboard {
@@ -169,7 +180,7 @@ body {
     margin-left: 20px;
 }
 
-.contentCard > .title {
+.contentCard>.title {
     font-size: 19px;
 }
 
@@ -265,13 +276,13 @@ body {
     }
 
     .advice-content .advice-avatar {
-        margin: 0 5px 20px 5px; 
+        margin: 0 5px 20px 5px;
     }
 
     /* float scroll btn */
     .scroll-btn {
-       padding: 0px 2px 0px 0px !important;
-       background-color: #1ea04c !important;
+        padding: 0px 2px 0px 0px !important;
+        background-color: #1ea04c !important;
     }
 
 }
@@ -341,11 +352,11 @@ body {
 }
 
 /*** floating button style ***/
-.dWAVVT{
+.dWAVVT {
     position: fixed !important;
 }
 
-.debaco{
+.debaco {
     position: fixed;
     background-color: #1ea04c !important;
     margin-top: -10px;
@@ -360,4 +371,9 @@ footer a {
 body .p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
     background-color: #34A835 !important;
     color: #ffffff;
+}
+
+
+.switcher-child:hover {
+    color: white !important;
 }

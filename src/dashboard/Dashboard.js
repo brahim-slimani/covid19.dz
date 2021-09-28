@@ -10,6 +10,7 @@ import { CustomAnalyticChart } from "./CustomAnalyticChart";
 import DailyChartReport from "./DailyChartReport";
 import AdviceCard from "../component/AdviceCard";
 import ScrollTop from "react-scrolltop-button";
+import { ThemeSwitcher } from "../component/ThemeSwitcher";
 
 
 class Dashboard extends React.Component {
@@ -166,6 +167,8 @@ class Dashboard extends React.Component {
                     className="scroll-btn"
                     style={{ backgroundColor: "#1ea04c", borderRadius: "0px", border: "0px solid #1ea04c", padding: "2px 8px", color: "white" }}
                 />
+
+                {/* <ThemeSwitcher /> */}
 
             </div>
         );
