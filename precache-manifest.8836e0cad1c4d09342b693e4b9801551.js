@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "be813a9e34b27f1b8d97423fe26a5c46",
+    "revision": "2248c250193aa0554e792b7aa1524757",
     "url": "/covid19.dz/index.html"
   },
   {
-    "revision": "424f0988d75e04fefb07",
-    "url": "/covid19.dz/static/css/2.3b4a80e9.chunk.css"
+    "revision": "0e812209169de9e0d22c",
+    "url": "/covid19.dz/static/css/2.55404a78.chunk.css"
   },
   {
-    "revision": "5667bc9b5a0357675fc1",
-    "url": "/covid19.dz/static/css/main.c8ee261c.chunk.css"
+    "revision": "d7ba3d98e592d551e2c4",
+    "url": "/covid19.dz/static/css/main.ded6de8d.chunk.css"
   },
   {
-    "revision": "424f0988d75e04fefb07",
-    "url": "/covid19.dz/static/js/2.2789894f.chunk.js"
+    "revision": "0e812209169de9e0d22c",
+    "url": "/covid19.dz/static/js/2.fc4dbf1e.chunk.js"
   },
   {
     "revision": "ba903c53eb54d8aeab56421ebd2fe389",
-    "url": "/covid19.dz/static/js/2.2789894f.chunk.js.LICENSE.txt"
+    "url": "/covid19.dz/static/js/2.fc4dbf1e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5667bc9b5a0357675fc1",
-    "url": "/covid19.dz/static/js/main.3531e94a.chunk.js"
+    "revision": "d7ba3d98e592d551e2c4",
+    "url": "/covid19.dz/static/js/main.bd0f4b58.chunk.js"
   },
   {
     "revision": "02e4fd68c91cbb29440d",
@@ -124,20 +124,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/covid19.dz/static/media/open-sans-v15-latin-regular.cffb686d.woff2"
   },
   {
-    "revision": "2d2afb2719a1ee903e576e7c457daf81",
-    "url": "/covid19.dz/static/media/primeicons.2d2afb27.eot"
+    "revision": "121254f73060bcbb53ca13258dbd134f",
+    "url": "/covid19.dz/static/media/primeicons.121254f7.ttf"
   },
   {
-    "revision": "66ee0deb739ca71f0ecdc39d7c1b22cb",
-    "url": "/covid19.dz/static/media/primeicons.66ee0deb.woff"
+    "revision": "25954ab5e32c01d577dcafd035597f5d",
+    "url": "/covid19.dz/static/media/primeicons.25954ab5.svg"
   },
   {
-    "revision": "df0140f8e79ecfeffaf85220aaecd7c4",
-    "url": "/covid19.dz/static/media/primeicons.df0140f8.ttf"
+    "revision": "3b6e3706f42d8876fe364ab4d75683fd",
+    "url": "/covid19.dz/static/media/primeicons.3b6e3706.woff"
   },
   {
-    "revision": "e5e0e94474d5fd92e7e800a8865d297c",
-    "url": "/covid19.dz/static/media/primeicons.e5e0e944.svg"
+    "revision": "b0f5d02f4e70967dcc8162e938484366",
+    "url": "/covid19.dz/static/media/primeicons.b0f5d02f.eot"
   },
   {
     "revision": "c12642e9757e9c891d6c71f2377f0597",
