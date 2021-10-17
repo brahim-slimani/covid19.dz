@@ -1,5 +1,6 @@
 import axios from 'axios';
-const PREFIX_API_NOVEL="https://corona.lmao.ninja/v3";
+//const PREFIX_API_NOVEL="https://corona.lmao.ninja/v3";
+const PREFIX_API_NOVEL = "https://disease.sh/v3/covid-19";
 const PREFIX_API_HDZ = "https://api.healthdz.com";
 
 class CallService {
