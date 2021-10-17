@@ -56,7 +56,7 @@ class CovidRankDeath extends Component {
 
     render() {
         return (
-            <div className='rank-container'>
+            <div className='rank-container mb-5'>
                 {this.state.data != null ?
                     <CustomDataTable title='Ranking of countries by rate of deaths'
                                      columns={this.columnsDataTable}

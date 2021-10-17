@@ -12,7 +12,7 @@ function CustomHeader(props) {
         //     </div>
         //     <img src={logo} className="App-logo" alt="logo" />
         // </div>
-        <nav class="navbar navbar-light custom-header">
+        <nav class="navbar navbar-light custom-header shadow">
             <a class="navbar-brand nav-title" href="index">
                 <img src={logo} className="App-logo" alt="logo" />
                 &nbsp; 

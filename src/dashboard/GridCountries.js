@@ -48,7 +48,10 @@ class GridCountries extends React.Component {
                         <br />
                         <div><i className="fa fa-certificate" />&nbsp;Confirmed Cases : {item.cases}</div>
                         <div><i className="fa fa-heartbeat" />&nbsp;Recovered : {item.recovered}</div>
-                        <div><img src={deathIcon} height={15} alt="img" />&nbsp;Deaths : {item.deaths}</div>
+                        <div>
+                            {/* <img src={deathIcon} height={15} alt="img" /> */}
+                            <i className="fa fa-heart" />
+                            &nbsp;Deaths : {item.deaths}</div>
                     </Panel>
                 }
             </div>

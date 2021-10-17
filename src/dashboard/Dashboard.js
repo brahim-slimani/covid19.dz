@@ -88,11 +88,11 @@ class Dashboard extends React.Component {
                     <div className='card-container'>
                         <CustomCard icon='fa fa-certificate' title='Total Cases' count={this.state.countCases} todayReport={this.state.todayCases} subtitle='new cases' color="red" />
                         &nbsp;
-                        <CustomCard img={deathIcon} title='Total Deaths' count={this.state.countDeaths} todayReport={this.state.todayDeaths} subtitle='new deaths' color="white" />
+                        <CustomCard icon="fa fa-heart" title='Total Deaths' count={this.state.countDeaths} todayReport={this.state.todayDeaths} subtitle='new deaths' />
                         &nbsp;
                         <CustomCard icon='fa fa-heartbeat' title='Total Recovers' count={this.state.countRecovered} color="#00ff00" />
                         &nbsp;
-                        <CustomCard img={bioIcon} title='Active Cases' count={this.state.countActive} color="#ffde00" />
+                        <CustomCard icon="fa fa-hotel" title='Active Cases' count={this.state.countActive} color="#ffde00" />
                     </div>
                 </div>
 
@@ -132,7 +132,7 @@ class Dashboard extends React.Component {
 
                 {/* <GridProvinces title="Situation in Provinces" viewport={window.innerWidth > 500 ? "desktop" : "mobile"} /> */}
 
-                <GridCountries title="COVID-19 around the world" viewport={window.innerWidth > 500 ? "desktop" : "mobile"} />
+                <GridCountries title="Covid19 around the world" viewport={window.innerWidth > 500 ? "desktop" : "mobile"} />
 
                 {/* <div className="chart-container">
                     <CovidBarChart title='Evolution Cases' type='cases' perimeter='world'/>
@@ -160,7 +160,7 @@ class Dashboard extends React.Component {
                 </div>
 
                 <CovidRankDeath />
-
+                
                 <ScrollTop
                     text={<i className="fa fa-arrow-up" />}
                     distance={90}
@@ -168,7 +168,7 @@ class Dashboard extends React.Component {
                     style={{ backgroundColor: "#1ea04c", borderRadius: "0px", border: "0px solid #1ea04c", padding: "2px 8px", color: "white" }}
                 />
 
-                {/* <ThemeSwitcher /> */}
+                <ThemeSwitcher />
 
             </div>
         );
