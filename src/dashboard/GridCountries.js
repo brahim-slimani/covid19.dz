@@ -1,7 +1,6 @@
 import React from "react";
 import { Panel } from "primereact/panel";
 import CovidService from "../service/CovidService";
-import deathIcon from "../assets/img/death-icon.png";
 import worldIcon from "../assets/img/world-icon.png";
 import { DataView } from "primereact/dataview";
 import { CustomInputFilter } from "../component/CustomInputFilter";

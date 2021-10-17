@@ -1,7 +1,5 @@
 import React from "react";
 import { CustomCard } from "../component/CustomCard";
-import deathIcon from "../assets/img/death-icon.png";
-import bioIcon from "../assets/img/bio-danger-yellow.png";
 import CovidService from "../service/CovidService";
 import CovidDoughnutChart from "./CovidDoughnutChart";
 import GridCountries from "./GridCountries";
