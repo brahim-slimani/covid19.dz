@@ -81,7 +81,7 @@ class Dashboard extends React.Component {
             <div className="App">
                 {/* <CustomHeader lastUpdate={this.state.lastUpdate} /> */}
                 <div className="card-parent">
-                    <AdviceCard />
+                    {/* <AdviceCard /> */}
                     <br />
                     <div className='card-container'>
                         <CustomCard icon='fa fa-certificate' title='Total Cases' count={this.state.countCases} todayReport={this.state.todayCases} subtitle='new cases' color="red" />
