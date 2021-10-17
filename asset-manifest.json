@@ -1,20 +1,19 @@
 {
   "files": {
     "main.css": "/covid19.dz/static/css/main.e81f0823.chunk.css",
-    "main.js": "/covid19.dz/static/js/main.13e21b88.chunk.js",
-    "main.js.map": "/covid19.dz/static/js/main.13e21b88.chunk.js.map",
+    "main.js": "/covid19.dz/static/js/main.69dc66a8.chunk.js",
+    "main.js.map": "/covid19.dz/static/js/main.69dc66a8.chunk.js.map",
     "runtime-main.js": "/covid19.dz/static/js/runtime-main.8a8e367d.js",
     "runtime-main.js.map": "/covid19.dz/static/js/runtime-main.8a8e367d.js.map",
     "static/css/2.a7516dec.chunk.css": "/covid19.dz/static/css/2.a7516dec.chunk.css",
-    "static/js/2.2e2be13b.chunk.js": "/covid19.dz/static/js/2.2e2be13b.chunk.js",
-    "static/js/2.2e2be13b.chunk.js.map": "/covid19.dz/static/js/2.2e2be13b.chunk.js.map",
+    "static/js/2.4164910a.chunk.js": "/covid19.dz/static/js/2.4164910a.chunk.js",
+    "static/js/2.4164910a.chunk.js.map": "/covid19.dz/static/js/2.4164910a.chunk.js.map",
     "index.html": "/covid19.dz/index.html",
-    "precache-manifest.e9b556dab8c5dce5ee4e4dc6b919533e.js": "/covid19.dz/precache-manifest.e9b556dab8c5dce5ee4e4dc6b919533e.js",
+    "precache-manifest.164e4e8fbd079af2785b7594c5683cd3.js": "/covid19.dz/precache-manifest.164e4e8fbd079af2785b7594c5683cd3.js",
     "service-worker.js": "/covid19.dz/service-worker.js",
     "static/css/2.a7516dec.chunk.css.map": "/covid19.dz/static/css/2.a7516dec.chunk.css.map",
     "static/css/main.e81f0823.chunk.css.map": "/covid19.dz/static/css/main.e81f0823.chunk.css.map",
-    "static/js/2.2e2be13b.chunk.js.LICENSE.txt": "/covid19.dz/static/js/2.2e2be13b.chunk.js.LICENSE.txt",
-    "static/media/bio-danger-yellow.png": "/covid19.dz/static/media/bio-danger-yellow.33985a5d.png",
+    "static/js/2.4164910a.chunk.js.LICENSE.txt": "/covid19.dz/static/js/2.4164910a.chunk.js.LICENSE.txt",
     "static/media/primereact.min.css": "/covid19.dz/static/media/line.567f5738.gif",
     "static/media/covid.png": "/covid19.dz/static/media/covid.5325b387.png",
     "static/media/font-awesome.min.css": "/covid19.dz/static/media/fontawesome-webfont.fee66e71.woff",
@@ -25,8 +24,8 @@
   "entrypoints": [
     "static/js/runtime-main.8a8e367d.js",
     "static/css/2.a7516dec.chunk.css",
-    "static/js/2.2e2be13b.chunk.js",
+    "static/js/2.4164910a.chunk.js",
     "static/css/main.e81f0823.chunk.css",
-    "static/js/main.13e21b88.chunk.js"
+    "static/js/main.69dc66a8.chunk.js"
   ]
 }

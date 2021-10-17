@@ -1,35 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1a6f0e2d0bd5b653a9cb8b851f7069a1",
+    "revision": "42174ab244383f98dd3f9e07dd415c2e",
     "url": "/covid19.dz/index.html"
   },
   {
-    "revision": "96be899daaffdf96c420",
+    "revision": "36f77982e82cd6eb3e50",
     "url": "/covid19.dz/static/css/2.a7516dec.chunk.css"
   },
   {
-    "revision": "ad0173f1f5799b985456",
+    "revision": "0c667591b5cd08125021",
     "url": "/covid19.dz/static/css/main.e81f0823.chunk.css"
   },
   {
-    "revision": "96be899daaffdf96c420",
-    "url": "/covid19.dz/static/js/2.2e2be13b.chunk.js"
+    "revision": "36f77982e82cd6eb3e50",
+    "url": "/covid19.dz/static/js/2.4164910a.chunk.js"
   },
   {
     "revision": "ba903c53eb54d8aeab56421ebd2fe389",
-    "url": "/covid19.dz/static/js/2.2e2be13b.chunk.js.LICENSE.txt"
+    "url": "/covid19.dz/static/js/2.4164910a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ad0173f1f5799b985456",
-    "url": "/covid19.dz/static/js/main.13e21b88.chunk.js"
+    "revision": "0c667591b5cd08125021",
+    "url": "/covid19.dz/static/js/main.69dc66a8.chunk.js"
   },
   {
     "revision": "02e4fd68c91cbb29440d",
     "url": "/covid19.dz/static/js/runtime-main.8a8e367d.js"
-  },
-  {
-    "revision": "33985a5d33a0f2492628168a96ce023e",
-    "url": "/covid19.dz/static/media/bio-danger-yellow.33985a5d.png"
   },
   {
     "revision": "c7a33805ffda0d32bd2a9904c8b02750",
