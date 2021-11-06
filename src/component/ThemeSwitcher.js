@@ -23,7 +23,7 @@ export const ThemeSwitcher = () => {
 
 
     return (
-        <div style={styledParentProps} onClick={onThemeSwitch}>
+        <div style={styledParentProps} className="px-3" onClick={onThemeSwitch}>
             <i className={`switcher-child ${theme === "dark" ? "pi pi-sun" : "pi pi-moon"}`}
                 style={styledChildProps}
             />
@@ -37,13 +37,14 @@ const styledParentProps = {
     left: '0px',
     backgroundColor: '#191e29',
     borderRadius: '0 50px 50px 0',
-    height: '40px',
-    padding: '5px 12px 10px 10px',
+    height: '45px',
     cursor: 'pointer',
-    boxShadow: '1px 1px 5px black'
+    boxShadow: '1px 1px 5px black',
+    display: 'flex',
+    alignItems: 'center'
 }
 
 const styledChildProps = {
-    fontSize: "20px",
+    fontSize: "22px",
     color: 'orange',
 }
