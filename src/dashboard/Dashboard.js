@@ -9,7 +9,7 @@ import DailyChartReport from "./DailyChartReport";
 import AdviceCard from "../component/AdviceCard";
 import ScrollTop from "react-scrolltop-button";
 import { ThemeSwitcher } from "../component/ThemeSwitcher";
-
+import CovidBarChart from "../dashboard/CovidBarChart"
 
 class Dashboard extends React.Component {
 
@@ -120,13 +120,13 @@ class Dashboard extends React.Component {
                     {this.state.todayCases !== 0 ? <CovidDoughnutChart title='Today Situation' type='today' perimeter='Algeria' /> : <div className="chart-content" />}
                 </div>
 
-                {/*<div className="chart-container">
+                {/* <div className="chart-container">
                     <WilayaChart title='Cases % Wilaya' type='confirmed'/>
                     &nbsp;
                     <WilayaChart title='Deaths % Wilaya' type='deaths'/>
                     &nbsp;
                     <div className="chart-content" />
-                </div>*/}
+                </div> */}
 
                 {/* <GridProvinces title="Situation in Provinces" viewport={window.innerWidth > 500 ? "desktop" : "mobile"} /> */}
 
@@ -158,7 +158,7 @@ class Dashboard extends React.Component {
                 </div>
 
                 <CovidRankDeath />
-                
+
                 <ScrollTop
                     text={<i className="fa fa-arrow-up" />}
                     distance={90}

@@ -12,13 +12,13 @@ function CustomHeader(props) {
         //     </div>
         //     <img src={logo} className="App-logo" alt="logo" />
         // </div>
-        <nav class="navbar navbar-light custom-header shadow">
+        <nav class="navbar navbar-light custom-header shadow-sm">
             <a class="navbar-brand nav-title" href="index">
                 <img src={logo} className="App-logo" alt="logo" />
-                &nbsp; 
-                <span className="desktop-title">COVID-19 Situation in Algeria</span>
-                <span className="mobile-title">COVID-19 DZ</span>
-                </a>
+                &nbsp;
+                <pre className="desktop-title mb-0 py-1">COVID-19 Situation in Algeria</pre>
+                <pre className="mobile-title mb-0 py-1">COVID-19 DZ</pre>
+            </a>
 
             <div class="right-nav">
                 <a href="https://slimani-ibrahim.github.io/profile" target="_blank" rel="noopener noreferrer">

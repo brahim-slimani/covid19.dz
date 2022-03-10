@@ -5,7 +5,6 @@
     --text-color: white;
     --bg-hover-cell: #2c2c2c;
     --href-color: #0f0;
-
 }
 
 [data-theme="light"] {
@@ -61,6 +60,10 @@
     color: var(--href-color) !important;
     /*  #00ff00  */
     display: inline-flex !important;
+}
+
+.nav-title>pre {
+    color: var(--href-color) !important;
 }
 
 .right-nav a {
@@ -200,6 +203,10 @@ body {
     margin-left: 20px;
 }
 
+.new-situation-span {
+    color: inherit !important;
+}
+
 .contentCard>.title {
     font-size: 19px;
 }
@@ -328,10 +335,6 @@ body {
     width: 95%;
     text-align: center;
     margin-top: 10px;
-}
-
-.title-covid-world {
-    font-size: 22px;
 }
 
 /*** filter input ***/
