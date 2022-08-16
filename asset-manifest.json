@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/covid19.dz/static/css/main.1bd46c4c.chunk.css",
-    "main.js": "/covid19.dz/static/js/main.bf9209bb.chunk.js",
-    "main.js.map": "/covid19.dz/static/js/main.bf9209bb.chunk.js.map",
-    "runtime-main.js": "/covid19.dz/static/js/runtime-main.8a8e367d.js",
-    "runtime-main.js.map": "/covid19.dz/static/js/runtime-main.8a8e367d.js.map",
+    "main.js": "/covid19.dz/static/js/main.d99e0ed9.chunk.js",
+    "main.js.map": "/covid19.dz/static/js/main.d99e0ed9.chunk.js.map",
+    "runtime-main.js": "/covid19.dz/static/js/runtime-main.bea21387.js",
+    "runtime-main.js.map": "/covid19.dz/static/js/runtime-main.bea21387.js.map",
     "static/css/2.a7516dec.chunk.css": "/covid19.dz/static/css/2.a7516dec.chunk.css",
-    "static/js/2.dddbb96e.chunk.js": "/covid19.dz/static/js/2.dddbb96e.chunk.js",
-    "static/js/2.dddbb96e.chunk.js.map": "/covid19.dz/static/js/2.dddbb96e.chunk.js.map",
+    "static/js/2.feaebaef.chunk.js": "/covid19.dz/static/js/2.feaebaef.chunk.js",
+    "static/js/2.feaebaef.chunk.js.map": "/covid19.dz/static/js/2.feaebaef.chunk.js.map",
     "index.html": "/covid19.dz/index.html",
-    "precache-manifest.9fddbfe43ba5c3b869de6c30a3c40838.js": "/covid19.dz/precache-manifest.9fddbfe43ba5c3b869de6c30a3c40838.js",
+    "precache-manifest.3de32bafd78bed1fa10e6f203d45049e.js": "/covid19.dz/precache-manifest.3de32bafd78bed1fa10e6f203d45049e.js",
     "service-worker.js": "/covid19.dz/service-worker.js",
     "static/css/2.a7516dec.chunk.css.map": "/covid19.dz/static/css/2.a7516dec.chunk.css.map",
     "static/css/main.1bd46c4c.chunk.css.map": "/covid19.dz/static/css/main.1bd46c4c.chunk.css.map",
-    "static/js/2.dddbb96e.chunk.js.LICENSE.txt": "/covid19.dz/static/js/2.dddbb96e.chunk.js.LICENSE.txt",
+    "static/js/2.feaebaef.chunk.js.LICENSE.txt": "/covid19.dz/static/js/2.feaebaef.chunk.js.LICENSE.txt",
     "static/media/primereact.min.css": "/covid19.dz/static/media/line.567f5738.gif",
     "static/media/covid.png": "/covid19.dz/static/media/covid.5325b387.png",
     "static/media/font-awesome.min.css": "/covid19.dz/static/media/fontawesome-webfont.fee66e71.woff",
@@ -22,10 +22,10 @@
     "static/media/world-icon.png": "/covid19.dz/static/media/world-icon.c1dd1584.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.8a8e367d.js",
+    "static/js/runtime-main.bea21387.js",
     "static/css/2.a7516dec.chunk.css",
-    "static/js/2.dddbb96e.chunk.js",
+    "static/js/2.feaebaef.chunk.js",
     "static/css/main.1bd46c4c.chunk.css",
-    "static/js/main.bf9209bb.chunk.js"
+    "static/js/main.d99e0ed9.chunk.js"
   ]
 }
