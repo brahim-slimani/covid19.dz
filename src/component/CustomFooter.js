@@ -16,11 +16,11 @@ function CustomFooter() {
                         <ul className="list-unstyled">
                             <li>
                                 <i className="fa fa-linkedin-square" />&nbsp;
-                                <a href="https://www.linkedin.com/in/ibrahim-slimani-184161b2/" target="_blank" rel="noopener noreferrer">Ibrahim Slimani</a>
+                                <a href="https://www.linkedin.com/in/brahim-slimani/" target="_blank" rel="noopener noreferrer">Brahim Slimani</a>
                             </li>
                             <li>
                                 <i className="fa fa-github-square" />&nbsp;
-                                <a href="https://github.com/Slimani-Ibrahim" target="_blank" rel="noopener noreferrer">Ibrahim Slimani</a>
+                                <a href="https://github.com/brahim-slimani" target="_blank" rel="noopener noreferrer">Brahim Slimani</a>
                             </li>
                             <li>
                                 <i className="fa fa-envelope-square" />&nbsp;
@@ -28,7 +28,7 @@ function CustomFooter() {
                             </li>
                             <li>
                                 <i className="fa fa-globe" />&nbsp;
-                                <a href="https://slimani-ibrahim.github.io/profile/" target="_blank" rel="noopener noreferrer">www.ibrahim-slimani.com</a>
+                                <a href="https://brahim-slimani.github.io/profile/" target="_blank" rel="noopener noreferrer">www.brahim-slimani.com</a>
                             </li>
                         </ul>
                     </div>
