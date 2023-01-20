@@ -21,16 +21,16 @@ function CustomHeader(props) {
             </a>
 
             <div class="right-nav">
-                <a href="https://slimani-ibrahim.github.io/profile" target="_blank" rel="noopener noreferrer">
+                <a href="https://brahim-slimani.github.io/profile" target="_blank" rel="noopener noreferrer">
                     <i class="fa fa-globe" title="portfolio"></i>
                 </a>&nbsp;&nbsp;
-                <a href="https://github.com/Slimani-Ibrahim" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/brahim-slimani" target="_blank" rel="noopener noreferrer">
                     <i class="fa fa-github" title="github"></i>
                 </a>&nbsp;&nbsp;
-                <a href="https://www.linkedin.com/in/ibrahim-slimani-184161b2/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/brahim-slimani/" target="_blank" rel="noopener noreferrer">
                     <i class="fa fa-linkedin" title="linkedin"></i>
                 </a>&nbsp;&nbsp;
-                <a href="https://github.com/Slimani-Ibrahim/covid19.dz" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/brahim-slimani/covid19.dz" target="_blank" rel="noopener noreferrer">
                     <i class="fa fa-code-fork" title="source code"></i>
                 </a>
             </div>
