@@ -34,7 +34,7 @@ function CustomFooter() {
                     </div>
                 </div>
             </div>
-            <div className="footer-copyright text-center py-3">© 2020 Copyright. Realised by Ibrahim Slimani
+            <div className="footer-copyright text-center py-3">© 2020 Copyright. Realised by Brahim Slimani
             </div>
         </footer>
     );
