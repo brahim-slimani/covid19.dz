@@ -15,7 +15,7 @@ jobs:
           name: git conf
           command: |
             git config --global user.email "slimani.ibr@gmail.com"
-            git config --global user.name "Slimani-Ibrahim"
+            git config --global user.name "brahim-slimani"
       - add_ssh_keys:
           fingerprints:
             - "20:79:e1:15:9b:6e:d3:ae:f3:37:a8:92:63:7b:c7:1f"
