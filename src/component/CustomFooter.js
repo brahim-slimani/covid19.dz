@@ -15,7 +15,7 @@ function CustomFooter() {
                         <h5 className="text-uppercase">Contact</h5>
                         <ul className="list-unstyled">
                             <li>
-                                <i className="fa fa-linkedin-square" />&nbsp;
+                                <i className="fa fa-linkedin" />&nbsp;
                                 <a href="https://www.linkedin.com/in/brahim-slimani/" target="_blank" rel="noopener noreferrer">Brahim Slimani</a>
                             </li>
                             <li>
